@@ -25,7 +25,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST['submit'])){
                 if(password_verify($password, $row['password'])){
                     $_SESSION["userid"] = $row['id'];
                     $_SESSION["user"] = $row;
-                    header("Location: ../authsystem/welcome.php");
+                    header("Location: ../php/welcome.php");
                     exit;
                 }else{
                     $error .= '<p class="error"> E-Mail oder Kennwort falsch.</p>'; #Falsches Passwort
@@ -71,6 +71,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST['submit'])){
                             <br>
                             <div class="form-group">
                                 <input type="submit" name="submit" class="btn-primary" value="Anmelden">
+                                <input type="button" name="submit" class="btn-primary" value="Zurück" id="back">
                             </div>
                             <br>
                             <div>
@@ -81,5 +82,10 @@ if($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST['submit'])){
                 </div>
             </div>
         </div>
+    <script>
+        document.getElementById('back').addEventListener('click', function() {
+            window.location.href = 'http://localhost/Project_C37592B/php/Homepage.php';
+        });
+    </script>
     </body>
 </html>

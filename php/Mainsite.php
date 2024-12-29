@@ -8,6 +8,7 @@ if(!isset($_SESSION["userid"]) || $_SESSION["userid"] !== false){
    exit;
 }
 ?>
+
 <!DOCTYPE html>
 <html lang="de">
     <head>
@@ -22,17 +23,21 @@ if(!isset($_SESSION["userid"]) || $_SESSION["userid"] !== false){
     <body>
         <header>
             <h1>Willkommen auf der Hauptseite</h1>
-            <p>
-                <a href="../authsystem/logout.php" class="btn btn-secondary btn-lg active" role="button" aria-pressed="true">Abmelden</a>
-            </p>
+            <div id="logout">
+                <input type="submit" class="btn-teriträr" name="submit" value="Abmelden" id="btn-logout" >
+            </div>
         </header>
-
-        <div id="message">
-            <h2>Hinweis:</h2>
-            <h3>Diese Webseite befindet sich noch im Aufbau.</h3>
-            <p>Es kann zu Einschränkungen kommen. Wir bitten um Verständnis.</p>
-        </div>
-            
+        <main>
+            <div class="flex-container">
+                <div id="bildverzeichnis">
+                    <p>Test</p>
+                </div>
+                <div id="functions">
+                    <a href="../php/register.php" class="btn btn-secondary btn-lg active" role="button" aria-pressed="true">Neuen Zugang anlegen</a><br>
+                    <a href="../php/logout.php" class="btn btn-secondary btn-lg active" role="button" aria-pressed="true">Abmelden</a>
+                </div>
+            </div>
+        </main> 
         <footer>
         <p>
             <a href="../html/Impressum.html">Impressum</a>
@@ -42,6 +47,10 @@ if(!isset($_SESSION["userid"]) || $_SESSION["userid"] !== false){
                 <a href="../html/Datenschutz.html">Datenschutz</a>
             </p>
         </footer>
-
+        <script>
+            document.getElementById('btn-logout').addEventListener('click', function() {
+                window.location.href = 'http://localhost/Project_C37592B/php/logout.php';
+            });
+        </script>";
     </body>
 </html>
