@@ -37,3 +37,60 @@ footer {
     width: 100%;
     position: absolute;
 }
+
+#message {
+    text-align: center;
+    padding: 0px;
+    margin-top: 0px;
+    background-color: red;
+    color: black;
+    position:fixed;
+    width: 100%;
+    top: 14%;
+}
+
+#login {
+    text-align: center;
+    background-color: #333;
+    color: white;
+    text-size-adjust: 10px;
+    position: fixed;
+}
+
+#form-group {
+    text-align: center;
+    background-color: #333;
+    color: white;
+    text-size-adjust: 10px;
+    size: 153px 20px;
+    position: sticky;
+}
+
+#loginbody {
+    margin: 0   ;
+    height: 100vh;
+    display: flex;
+    justify-content:center;
+    align-items: center;
+    background-color: #333;
+}
+
+.error{
+    text-align: center;
+    background-color: #333;
+    color: red;
+    font-size: 15px;
+    text-size-adjust: 10px;
+    position: sticky;
+}
+
+#welcome {
+    margin: 0;
+    height: 100vh;
+    display: flex;
+    justify-content:center;
+    align-items: center;
+    color: white;
+    background-color: #333;
+    text-align: center;
+}
