@@ -102,11 +102,6 @@ footer a:visited{
     padding: 12px 28px;
 }
 
-.btn-submit{
-    justify-content: space-between;
-    margin: auto;
-}
-
 #loginbody {
     margin: 0   ;
     height: 100vh;
