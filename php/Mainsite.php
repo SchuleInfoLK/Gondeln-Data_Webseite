@@ -33,8 +33,9 @@ if(!isset($_SESSION["userid"]) || $_SESSION["userid"] !== false){
                     <p>Test</p>
                 </div>
                 <div id="functions">
+                    <input type="submit" class="btn-quarter" name="submit" value="Neuen Zugang anlegen" id="btn-register">
+                    <br>
                     <a href="../php/register.php" class="btn btn-secondary btn-lg active" role="button" aria-pressed="true">Neuen Zugang anlegen</a><br>
-                    <a href="../php/logout.php" class="btn btn-secondary btn-lg active" role="button" aria-pressed="true">Abmelden</a>
                 </div>
             </div>
         </main> 
@@ -50,6 +51,9 @@ if(!isset($_SESSION["userid"]) || $_SESSION["userid"] !== false){
         <script>
             document.getElementById('btn-logout').addEventListener('click', function() {
                 window.location.href = 'http://localhost/Project_C37592B/php/logout.php';
+            });
+            document.getElementById('btn-register').addEventListener('click', function(){
+                window.location.href = 'http://localhost/Project_C37592B/php/register.php';
             });
         </script>";
     </body>
