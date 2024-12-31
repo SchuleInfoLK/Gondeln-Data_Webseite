@@ -108,7 +108,6 @@ footer a:visited{
     background-image: url("../images/skiweltbahn.JPG");
     background-repeat: no-repeat;
     background-size: 100%, auto;
-    background-position: center;
     #loginbody{
         min-height: 100vh;
         margin: 0;
@@ -119,7 +118,10 @@ footer a:visited{
         position: sticky;
         .form-group{
             h1{
-                color: red;
+                text-align: left;
+                margin-left: 40%;
+                color: rgb(0, 0, 0);
+                font-size: 75px;
             }
             input[name="email"]{
                 width: 25%;
@@ -134,10 +136,10 @@ footer a:visited{
                 box-sizing: border-box;
             }
             input[name="email"]:focus{
-                border: 5px solid #7b7b7b;
+                border: 5px solid rgb(178, 201, 212);
             }
             input[name="password"]:focus{
-                border: 3px solid red;
+                border: 5px solid rgb(178, 201, 212);
             }
             .form-group-button{
                 display: flex;
