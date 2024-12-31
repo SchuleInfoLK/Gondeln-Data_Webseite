@@ -67,11 +67,6 @@ footer a:visited{
     color: white;
 }
 
-.btn-primary:hover {
-    background-color: #333;
-    color: white;
-}
-
 .btn-teriträr{
     background-color: #333;
     color: white;
@@ -91,30 +86,85 @@ footer a:visited{
     justify-content: center;
     align-items: center;
     background-color: #333;
-}
-
-.form-group{
-    input{
-        width: 100%;
+    .error{
+        text-align: center;
+        background-color: #333;
+        color: red;
+        font-size: 15px;
+        text-size-adjust: 10px;
+        position: sticky;
+    }
+    
+    .success {
+        text-align: center;
+        background-color: #333;
+        color: green;
+        font-size: 15px;
+        text-size-adjust: 10px;
+        position: sticky;
     }
 }
-
-.error{
-    text-align: center;
-    background-color: #333;
-    color: red;
-    font-size: 15px;
-    text-size-adjust: 10px;
-    position: sticky;
-}
-
-.success {
-    text-align: center;
-    background-color: #333;
-    color: green;
-    font-size: 15px;
-    text-size-adjust: 10px;
-    position: sticky;
+.container{
+    background-image: url("../images/skiweltbahn.JPG");
+    background-repeat: no-repeat;
+    background-size: 100%, auto;
+    background-position: center;
+    #loginbody{
+        min-height: 100vh;
+        margin: 0;
+        flex-direction: column;
+        text-align: center;
+        justify-content: space-around;
+        display: flex;
+        position: sticky;
+        .form-group{
+            h1{
+                color: red;
+            }
+            input[name="email"]{
+                width: 25%;
+                padding: 12px 20px;
+                margin: 8px 0;
+                box-sizing: border-box;
+            }
+            input[name="password"]{
+                width: 25%;
+                padding: 12px 20px;
+                margin: 8px 0;
+                box-sizing: border-box;
+            }
+            input[name="email"]:focus{
+                border: 5px solid #7b7b7b;
+            }
+            input[name="password"]:focus{
+                border: 3px solid red;
+            }
+            .form-group-button{
+                display: flex;
+                justify-content: space-around;
+                text-align: center;
+                margin-left: 30%;
+                margin-right: 30%;
+                .btn-primary{
+                    background-color: white;
+                    color: #333;
+                }
+                .btn-primary:hover {
+                    background-color: #333;
+                    color: white;
+                }
+            }
+            .error{
+                text-align: center;
+                color: red;
+                font-size: 20px;
+                text-size-adjust: 10px;
+                font-weight: bold;
+                font-stretch: ultra-expanded;
+                position: sticky;
+            }
+        }
+    }
 }
 
 #welcome {
@@ -138,12 +188,4 @@ footer a:visited{
     position: fixed;
     width: 30px;
     height: auto;
-}
-
-#login {
-    text-align: center;
-    background-color: #333;
-    color: white;
-    text-size-adjust: 10px;
-    position: fixed;
 }
