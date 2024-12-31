@@ -2,7 +2,6 @@ body {
     margin: 0;
     padding: 0;
     background-color: white;
-    color: black;
 }
 
 header {
@@ -84,15 +83,6 @@ footer a:visited{
     color: white;
     padding: 12px 28px;
 }
-/*
-#loginbody {
-    margin: 0   ;
-    height: 100vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-color: #333;
-}*/
 
 #regbody {
     margin: 0;
@@ -101,6 +91,10 @@ footer a:visited{
     justify-content: center;
     align-items: center;
     background-color: #333;
+}
+
+.form-group input{
+    width: 100%;
 }
 
 .error{
@@ -119,33 +113,6 @@ footer a:visited{
     font-size: 15px;
     text-size-adjust: 10px;
     position: sticky;
-}
-
-/*#form-group input{
-    text-align: center;
-    background-color: #333;
-    color: white;
-    text-size-adjust: 10px;
-    size: 153px 20px;
-    position: sticky;
-    justify-content: space-between;
-}*/
-
-div.form-group{
-    color: aqua;
-}
-
-div.form-group input{
-    width: 25%;
-    background-color: white;
-    background-image: '../images/password-icon.png';
-    background-position: 10px 10px;
-    background-repeat: no-repeat;
-    padding-left: 40px;
-}
-
-#form-group input:focus{
-    border: 3px solid #ff0000;
 }
 
 #welcome {
