@@ -93,8 +93,10 @@ footer a:visited{
     background-color: #333;
 }
 
-.form-group input{
-    width: 100%;
+.form-group{
+    input{
+        width: 100%;
+    }
 }
 
 .error{

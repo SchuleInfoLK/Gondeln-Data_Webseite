@@ -66,7 +66,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST['submit'])){
                             </div>
                             <div class="form-group">
                                 <!-- <label>Passwort</label>-->
-                                <input type="password" name="password" class="form-control" required="" placeholder="Passwort" oninvalid="this.setCustomValidity('Bitte ein Passwort eingeben')" oninput="setCustomValidity('')">
+                                <input type="password" name="password" class="form-control" required="" placeholder="Passwort" oninvalid="this.setCustomValidity('Bitte ein Passwort eingeben')" oninput="setCustomValidity('')"/>
                             </div>
                             <br>
                             <div class="form-group">
