@@ -66,13 +66,19 @@ if($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST['submit'])){
                             </div>
                             <div class="form-group">
                                 <!-- <label>Passwort</label>-->
-                                <input type="password" name="password" class="form-control" required="" placeholder="Passwort" oninvalid="this.setCustomValidity('Bitte ein Passwort eingeben')" oninput="setCustomValidity('')"/>
+                                <input type="password" name="password" class="form-control" required="" placeholder="Passwort" oninvalid="this.setCustomValidity('Bitte ein Passwort eingeben')" oninput="setCustomValidity('')" />
                             </div>
                             <br>
                             <div class="form-group">
                                 <div class="form-group-button">
-                                    <input type="submit" name="submit" class="btn-primary" value="Anmelden">
                                     <input type="button" name="submit" class="btn-primary" value="Zurück" id="back">
+                                    <input type="submit" name="submit" class="btn-primary" value="Anmelden">
+                                </div>
+                            </div>
+                            <br>
+                            <div class="form-group">
+                                <div class="form-group-button">
+                                    <input type="button" name="submit" class="btn-primary" value="Passwort zurücksetzen" id="reset">
                                 </div>
                             </div>
                             <br>
@@ -87,6 +93,9 @@ if($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST['submit'])){
     <script>
         document.getElementById('back').addEventListener('click', function() {
             window.location.href = 'http://localhost/Project_C37592B/php/Homepage.php';
+        });
+        document.getElementById('reset').addEventListener('click', function(){
+            window.location.href = 'https://youtu.be/dQw4w9WgXcQ';
         });
     </script>
     </body>
