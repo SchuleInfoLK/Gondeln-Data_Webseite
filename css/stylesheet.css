@@ -226,35 +226,48 @@ footer {
 .seilbahn{
     main{
         display: flex;
-    }
-    .gondel{
-        justify-content: center;
-        table{
-            text-align: center;
-            width: 100%;
-            padding-left: 1%;
-            padding-right: 1%;
-        }
-        pic-db{
-            img{
-                width: 25%;
-                height: auto;
+        .gondel{
+            justify-content: right;
+            table{
+                text-align: center;
+                width: 100%;
+                padding-left: 5%;
+                padding-right: 1%;
+            }
+            .pic-db{
+                img{
+
+                    width: 30%;
+                    height: auto;
+                }
             }
         }
-    }
-    .auswal{
-        justify-content: left;
-        text-align: left;
-        h2{
-            color: #3300ff;
-        }
-        h3{
-            text-decoration: none;
-        }
-        form{
-            padding-right: 85%;
-            text-align: left;
+        .auswal{
             justify-content: left;
-        }
-    }  
+            text-align: left;
+            h2{
+                color: #3300ff;
+            }
+            h3{
+                text-decoration: none;
+            }
+            form{
+                padding-right: 95%;
+                text-align: left;
+                justify-content: left;
+                
+            }
+            button{
+                background-color: white;
+                color: black;
+                padding: 12px 28px;;
+            }
+            button:focus, button:hover{
+                background-color: black;
+                color: white;
+                padding: 12px 28px;
+            }
+        }  
+    }
+    
 }
