@@ -80,7 +80,7 @@ footer {
 
 
 .container{
-    background-image: url("../images/skiweltbahn.JPG");
+    background-image: url("../images/background/skiweltbahn.JPG");
     background-repeat: no-repeat;
     background-size: 100%, auto;
     #loginbody{
@@ -104,7 +104,7 @@ footer {
                 margin: 8px 0;
                 box-sizing: border-box;
                 border: 2px solid black;
-                background-image: url('../images/email.png');
+                background-image: url('../images/icons/email.png');
                 background-position: 5px, 5px;
                 background-size: 25px, auto;
                 background-repeat: no-repeat;
@@ -116,7 +116,7 @@ footer {
                 margin: 8px 0;
                 box-sizing: border-box;
                 border: 2px solid black;
-                background-image: url('../images/lock.png');
+                background-image: url('../images/icons/lock.png');
                 background-position: 5px, 5px;
                 background-size: 25px, auto;
                 background-repeat: no-repeat;
@@ -223,3 +223,21 @@ footer {
     background-size: 100%, auto;
 }
 
+.seilbahn{
+    .pic-db{
+        img{
+            width: 25%;
+            height: auto;
+        }
+    }
+    table{
+        text-align: center;
+        iconstf{
+            height: 5%;
+            width: auto;
+        }
+    }
+    footer{
+        position: absolute;
+    }
+}

@@ -17,7 +17,7 @@ if(!isset($_SESSION["userid"]) || $_SESSION["userid"] !== false){
         <link rel="stylesheet" type="text/css" href="../css/stylesheet.css" />
         <title>Home</title>
         <link rel="icon" type="image/jpg"
-            href="../images/icon.jpg">
+        href="../images/icons/cable-car.png">
     </head>
 
     <body>

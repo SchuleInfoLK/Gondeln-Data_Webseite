@@ -64,7 +64,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST['submit'])){
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Registrieren</title>
-        <link rel="icon" type="image/jpg" href="../images/icon.jpg">
+        <link rel="icon" type="image/jpg" href="../images/icons/cable-car.png">
         <link rel="stylesheet" type="text/css" href="../css/stylesheet.css" />
     </head>
     <body>
