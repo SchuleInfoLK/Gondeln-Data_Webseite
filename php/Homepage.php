@@ -36,8 +36,8 @@ require_once "config.php";
                                     case 1:
                                         echo "<h3>Funitel</h3>";
                                         while ($row = $result->fetch_assoc()) {
-                                            echo "<form method='POST' style='display:inline;'>";
-                                            echo "<button type='submit' name='id' value='" . htmlspecialchars($row['id']) . "'>" . htmlspecialchars($row['name']) . "</button>";
+                                            echo "<form method='POST'>";
+                                            echo "<button type='submit' name='id' id='btn-wahl' value='" . htmlspecialchars($row['id']) . "'>" . htmlspecialchars($row['name']) . "</button>";
                                             echo "</form> ";
                                         }
                                         break;
@@ -45,25 +45,25 @@ require_once "config.php";
                                     case 2:
                                         echo "<h3>3S-Bahn</h3>";
                                         while ($row = $result->fetch_assoc()) {
-                                            echo "<form method='POST' style='display:inline;'>";
+                                            echo "<form method='POST'>";
                                             echo "<button type='submit' name='id' value='" . htmlspecialchars($row['id']) . "'>" . htmlspecialchars($row['name']) . "</button>";
                                             echo "</form> ";
                                         }
                                         break;
 
                                     case 3:
-                                        echo "<h3>Einsilumlaufbahn</h3>";
+                                        echo "<h3>Einseilumlaufbahn</h3>";
                                         while ($row = $result->fetch_assoc()) {
-                                            echo "<form method='POST' style='display:inline;'>";
-                                            echo "<button type='submit' name='id' value='" . htmlspecialchars($row['id']) . "'>" . htmlspecialchars($row['name']) . "</button>";
+                                            echo "<form method='POST'>";
+                                            echo "<button type='submit' name='id' id='btn-wahl' value='" . htmlspecialchars($row['id']) . "'>" . htmlspecialchars($row['name']) . "</button>";
                                             echo "</form> ";
                                         }
                                         break;
                                     case 4:
                                         echo "<h3>Pendelbahn</h3>";
                                         while ($row = $result->fetch_assoc()) {
-                                            echo "<form method='POST' style='display:inline;'>";
-                                            echo "<button type='submit' name='id' value='" . htmlspecialchars($row['id']) . "'>" . htmlspecialchars($row['name']) . "</button>";
+                                            echo "<form method='POST'>";
+                                            echo "<button type='submit' name='id' id='btn-wahl' value='" . htmlspecialchars($row['id']) . "'>" . htmlspecialchars($row['name']) . "</button>";
                                             echo "</form> ";
                                         }
                                         break;
@@ -146,6 +146,18 @@ require_once "config.php";
                                 //echo "<h3>Keine Einträge für typ_db = {$i}</h3>";
                             }
                         }
+                        $stmt = $db->prepare("SELECT name, id FROM SeilbahnDaten WHERE typ_db = 10");
+                        $stmt->execute();
+                        $result = $stmt->get_result();
+                        if($result != NULL){
+                            echo "<h2>Sonstige</h2>";
+                            while ($row = $result->fetch_assoc()) {
+                                echo "<form method='POST' style='display:inline;'>";
+                                echo "<button type='submit' name='id' value='" . htmlspecialchars($row['id']) . "'>" . htmlspecialchars($row['name']) . "</button>";
+                                echo "</form> ";
+                            }
+                        } 
+                        echo "<br><br><br><br>"
                     ?>
                 </div>
                 <div class="gondel">
@@ -213,10 +225,10 @@ require_once "config.php";
                 </div>
             </main> 
             <footer>
-            <p>
+                <p>
                 <a href="../html/Impressum.html">Impressum</a>
                 </p>
-                <p>&copy; 2024 Philipp Uhlendorf</p>
+                <p>&copy; 2024-2025 Philipp Uhlendorf</p>
                 <p>
                     <a href="../html/Datenschutz.html">Datenschutz</a>
                 </p>
@@ -242,5 +254,7 @@ require_once "config.php";
             7 = 4er
             8 = 6er
             9 = 8er
+        Besondere
+            10 = Besondere
         -->
 </html>
