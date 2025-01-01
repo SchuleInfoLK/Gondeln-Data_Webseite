@@ -19,7 +19,7 @@ $user = $result->fetch_assoc();
     <link rel="stylesheet" type="text/css" href="../css/stylesheet.css" />
     <title>Home</title>
     <link rel="icon" type="image/jpg"
-		  href="../images/icon.jpg">
+		  href="../images/icons/cable-car.png">
 </head>
 
 <body>
@@ -33,7 +33,7 @@ $user = $result->fetch_assoc();
 session_start();
 
 if(!isset($_SESSION["userid"]) || $_SESSION["userid"] !== false){
-    header("Refresh:1; url= ../php/Mainsite.php");
+    header("Refresh:2; url= ../php/Mainsite.php");
    exit;
 }else{
     header("location: login.php");

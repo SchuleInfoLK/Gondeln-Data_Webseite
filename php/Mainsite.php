@@ -17,7 +17,7 @@ if(!isset($_SESSION["userid"]) || $_SESSION["userid"] !== false){
         <link rel="stylesheet" type="text/css" href="../css/stylesheet.css" />
         <title>Home</title>
         <link rel="icon" type="image/jpg"
-            href="../images/icon.jpg">
+        href="../images/icons/cable-car.png">
     </head>
 
     <body>
@@ -33,8 +33,8 @@ if(!isset($_SESSION["userid"]) || $_SESSION["userid"] !== false){
                     <p>Test</p>
                 </div>
                 <div id="functions">
-                    <a href="../php/register.php" class="btn btn-secondary btn-lg active" role="button" aria-pressed="true">Neuen Zugang anlegen</a><br>
-                    <a href="../php/logout.php" class="btn btn-secondary btn-lg active" role="button" aria-pressed="true">Abmelden</a>
+                    <input type="submit" class="btn-quarter" name="submit" value="Neuen Zugang anlegen" id="btn-register">
+                    <br>
                 </div>
             </div>
         </main> 
@@ -50,6 +50,9 @@ if(!isset($_SESSION["userid"]) || $_SESSION["userid"] !== false){
         <script>
             document.getElementById('btn-logout').addEventListener('click', function() {
                 window.location.href = 'http://localhost/Project_C37592B/php/logout.php';
+            });
+            document.getElementById('btn-register').addEventListener('click', function(){
+                window.location.href = 'http://localhost/Project_C37592B/php/register.php';
             });
         </script>";
     </body>

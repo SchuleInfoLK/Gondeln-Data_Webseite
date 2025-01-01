@@ -46,7 +46,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST['submit'])){
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Anmeldung</title>
         <link rel="stylesheet" type="text/css" href="../css/stylesheet.css" />
-        <link rel="icon" type="image/jpg" href="../images/icon.jpg">
+        <link rel="icon" type="image/jpg" href="../images/icons/cable-car.png">
     </head>
     <body>
         <!--<header>
@@ -65,16 +65,24 @@ if($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST['submit'])){
                                 <input type="email" name="email" class="form-control" placeholder="E-Mail" required=""  oninvalid="this.setCustomValidity('Bitte eine gültige E-Mail eingeben')" oninput="setCustomValidity('')"/>
                             </div>
                             <div class="form-group">
-                                <!-- <label>Passwort</label> -->
-                                <input type="password" name="password" class="form-control" required="" placeholder="Passwort" oninvalid="this.setCustomValidity('Bitte ein Passwort eingeben')" oninput="setCustomValidity('')">
+                                <!-- <label>Passwort</label>-->
+                                <input type="password" name="password" class="form-control" required="" placeholder="Passwort" oninvalid="this.setCustomValidity('Bitte ein Passwort eingeben')" oninput="setCustomValidity('')" />
                             </div>
                             <br>
                             <div class="form-group">
-                                <input type="submit" name="submit" class="btn-primary" value="Anmelden">
-                                <input type="button" name="submit" class="btn-primary" value="Zurück" id="back">
+                                <div class="form-group-button">
+                                    <input type="button" name="submit" class="btn-primary" value="Zurück" id="back">
+                                    <input type="submit" name="submit" class="btn-primary" value="Anmelden">
+                                </div>
                             </div>
                             <br>
-                            <div>
+                            <div class="form-group">
+                                <div class="form-group-button">
+                                    <input type="button" name="submit" class="btn-primary" value="Passwort zurücksetzen" id="reset">
+                                </div>
+                            </div>
+                            <br>
+                            <div class="form-group">
                                 <?php echo $error; ?>   
                             </div>
                         </form>
@@ -85,6 +93,9 @@ if($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST['submit'])){
     <script>
         document.getElementById('back').addEventListener('click', function() {
             window.location.href = 'http://localhost/Project_C37592B/php/Homepage.php';
+        });
+        document.getElementById('reset').addEventListener('click', function(){
+            window.location.href = 'https://youtu.be/dQw4w9WgXcQ';
         });
     </script>
     </body>

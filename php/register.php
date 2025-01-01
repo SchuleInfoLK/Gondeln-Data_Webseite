@@ -64,7 +64,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST['submit'])){
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Registrieren</title>
-        <link rel="icon" type="image/jpg" href="../images/icon.jpg">
+        <link rel="icon" type="image/jpg" href="../images/icons/cable-car.png">
         <link rel="stylesheet" type="text/css" href="../css/stylesheet.css" />
     </head>
     <body>
@@ -101,8 +101,10 @@ if($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST['submit'])){
                             </div>
                             <br>
                             <div class="form-group">
-                                <input type="submit" name="submit" class="btn-primary" value="Registrieren" >
-                                <input type="button" name="submit" class="btn-primary" value="Zurück" id="back">
+                                <div class="form-group-button">
+                                    <input type="button" name="submit" class="btn-primary" value="Zurück" id="back">
+                                    <input type="submit" name="submit" class="btn-primary" value="Registrieren" >
+                                </div>
                             </div>
                             <br>
                             <div>
