@@ -81,9 +81,6 @@ CREATE TABLE `users` (
 -- Daten für Tabelle `users`
 --
 
-INSERT INTO `users` (`id`, `name`, `password`, `email`) VALUES
-(1, 'Philipp Uhlendorf', '$2y$10$Zho5gVuxkBwJWEPsSFT/ZuJikhixUZcew39XvKct96.X45btcFwZG', 'philipp.uhlendorf@gmx.de');
-
 --
 -- Indizes der exportierten Tabellen
 --
