@@ -35,7 +35,6 @@ if(!isset($_SESSION["userid"]) || $_SESSION["userid"] !== false){
                 <div id="functions">
                     <input type="submit" class="btn-quarter" name="submit" value="Neuen Zugang anlegen" id="btn-register">
                     <br>
-                    <a href="../php/register.php" class="btn btn-secondary btn-lg active" role="button" aria-pressed="true">Neuen Zugang anlegen</a><br>
                 </div>
             </div>
         </main> 
