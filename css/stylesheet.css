@@ -261,9 +261,9 @@ footer {
             flex-shrink: 0;
             position: sticky;
             margin: 1%;
-            max-width: 85%;
+            max-width: calc(100% - 350px);
             table{
-                font-size: larger;
+                font-size: clamp(11px, 0.7vw, 20px);
                 display: flex;
                 justify-content: center;
                 max-width: 50%;
@@ -280,14 +280,13 @@ footer {
             }
             .pic-else{
                 img{
-                    width: 93%;
+                    width: 154vh;
                     height: auto;
                 }
             }
             .pic-db{
                 img{
-                    max-width: 50%;
-                    max-height: 29%;
+                    max-width: calc(100vh - 25vh);
                     width: auto;
                     height: auto;
                 }
@@ -295,7 +294,7 @@ footer {
         }
         .auswahl{
             color: rgb(2, 2, 99);
-            max-width: 250;
+            max-width: 300px;
             overflow-y: auto;
             overflow-x: hidden;
             max-height: 90vh;
