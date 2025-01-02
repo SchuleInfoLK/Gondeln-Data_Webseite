@@ -1,15 +1,35 @@
 <?php
+/*---------------------------------------------------------------------------------------------------------
+    HINWEIS:
+    SOLLTEN SIE DAS HIER SEHEN IST EIN FEHLER AUFGETRETEN:
+
+    1. Überprüfen Sie ob die Datei auf einem (Lokalen-/Web-)Server liegt und dieser gestartet ist.
+            Falls nicht:
+                -Laden Sie und instalieren Sie XAMPP von https://www.apachefriends.org/download.html
+                -Starten Sie dann den Apache Server und legen Sie den Ordner im Verzeichnis:"C:\xampp\htdocs"
+                -Rufen Sie dann im Browser: localhost/"Ordnername"/"dateiname"."dateiendung" auf
+
+    NOTE: 
+    IF YOU SEE THIS, AN ERROR HAS OCCURRED:
+
+    Check if the file is located on a (local/web) server and if the server is running
+        If not:
+            -Download and install XAMPP from https://www.apachefriends.org/download.html
+            -Start the Apache server and place the folder in the directory: "C:\xampp\htdocs"
+            -Then open your browser and go to: localhost/"foldername"/"filename"."fileextension"
+---------------------------------------------------------------------------------------------------------*/
+
+use PSpell\Config;
+
 require_once "config.php";
 
-if (!file_exists(__FILE__)) { echo "<script>alert('Die Datei kann nicht ausgeführt werden!');
-    </script>"; echo "<script>window.location.href = '../html/Home.html';</script>";
-    exit(); 
-} 
-if ($db->connect_error) { 
-    echo "<script>alert('Datenbankverbindung fehlgeschlagen: " . $db->connect_error . "');</script>";
-    echo "<script>window.location.href = 'deine_seite.html';</script>";
+$db = mysqli_connect(DBSERVER, DBUSERNAME, DBPASSWORD, DBNAME);
+
+if ($db === false) {
+    echo "<script>alert('Datenbankverbindung fehlgeschlagen');</script>";
+    echo "<script>window.location.href = 'localhost/Projekt_C37592B/html/error.html';</script>";
     exit();
-} 
+}
 ?>
 
 <!DOCTYPE html>
@@ -256,7 +276,9 @@ if ($db->connect_error) {
                                 <?php endif;
                                 }
                             mysqli_close($db);
-                    }   
+                    }else{
+                        echo '<div class="pic-db"><img src= "../images/background/skiweltbahn.jpg""></div>';
+                    } 
                     ?>
                 </div>
             </main> 

@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="de, en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Error</title>
+    </head>
+    <style>
+        body{
+            h1{
+                text-decoration: underline;
+            }
+            text-align: center;
+            justify-content: center;
+            color: red;
+            header{
+            top: o;
+            position: sticky;
+            }
+            footer{
+                bottom: 0;
+                color: black;
+                position: absolute;
+                text-align: center;
+                width: 100%;
+            }
+        }
+
+    </style>
+    <body>
+        <header> 
+            <h1><center>Error</center></h1>
+        </header>
+        <br>
+        <br>
+        <br>
+        <main>
+            <h2>
+                Keine Datenbank gefunden:
+            </h2>
+            <p>
+            1. Überprüfen Sie ob die Datei auf einem (Lokalen-/Web-)Server liegt und dieser gestartet ist, sowie das mySQL aktiv ist.<br>
+                    Falls nicht:<br>
+                        - Laden Sie und instalieren Sie XAMPP von <a href="https://www.apachefriends.org/download.html">Download</a><br>
+                        - Starten Sie dann den Apache Server sowie mySQL und legen Sie den Ordner im Verzeichnis:"C:\xampp\htdocs"<br>
+                        - Öfnen Sie anschließend <a href="http://localhost/phpmyadmin/">http://localhost/phpmyadmin/</a><br>
+                        - Erstellen sie nun mit "Neu" eine neue Datenabnk mit dem Namen: <b>projekt_c37592b</b> mit <b>utf8_unicode_ci</b><br>
+                        - Wählen Sie nun am linken Rand die erstellte Datenbank aus und wählen Sie oben den Reiter "Importieren"<br>
+                        - Importieren Sie zuerst die Datei: <b>database.sql.gz</b> un dbestätigen das ganze mit ok<br>
+                        - Wiederholen Sie die letzten beiden Schritte mit der Datei: <b>SeilbahnDaten.sql.gz</b><br>
+                        - Rufen Sie dann im Browser: <a href="../php/Homepage.php">Homepage</a> auf<br>
+                        <b>- Sie sollten nicht hierher weitergeleitet werden</b>
+            </p>
+            <br>
+            <h2>
+                No Database Found:
+            </h2>
+            <p>
+            1. Check if the file is located on a (local/web) server and if the server is running, as well as if mySQL is active.<br>
+                    If not:<br>
+                        - Download and install XAMPP from <a href="https://www.apachefriends.org/download.html">Download</a><br>
+                        - Then start the Apache server and mySQL, and place the folder in the directory: "C:\xampp\htdocs"<br>
+                        - Then open <a href="http://localhost/phpmyadmin/">http://localhost/phpmyadmin/</a><br>
+                        - Create a new database with the name: <b>projekt_c37592b</b> with <b>utf8_unicode_ci</b><br>
+                        - Select the created database on the left and choose the "Import" tab at the top<br>
+                        - First import the file: <b>database.sql.gz</b> and confirm with OK<br>
+                        - Repeat the last two steps with the file: <b>SeilbahnDaten.sql.gz</b><br>
+                        - Then open in the browser: <a href="../php/Homepage.php">Homepage</a><br>
+                        <b>- You should not be redirected here</b>
+            </p>
+            <br>
+            <p>------------------------------------------------------------------------------------------------------------------------------------</p>
+            <br>
+            <p>
+                <h2>Keine Logindaten</h2>
+                Zum nutzen des Logins müssen Sie zum erstellen des ersten Account auf;<br>
+                <a href="../php/register.php">Hier klicken</a><br>
+                <b>Alle weiteren Accounts können durch das anmelden auf der Webseite erstellt werden</b>
+            </p>
+            <br>
+            <p>
+                <h2>No Login Data</h2>
+                To use the login, you need to create the first account by clicking on;<br>
+                <a href="../php/register.php">Here</a><br>
+                <b>All further accounts can be created by logging in on the website</b>
+            </p>
+        </main>
+
+        <footer>
+            <p><center>&copy; 2024-2025 Philipp Uhlendorf</center></p>
+        </footer>
+    </body>
+</html>
