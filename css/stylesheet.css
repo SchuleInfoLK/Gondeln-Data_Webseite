@@ -257,7 +257,7 @@ footer {
             text-align: center;
             overflow-y: auto;
             overflow-x: hidden;
-            max-height: 90vh;
+            max-height: calc(100vh - 11vh);
             flex-grow: 1;
             flex-shrink: 0;
             position: sticky;
@@ -298,10 +298,9 @@ footer {
             max-width: 300px;
             overflow-y: auto;
             overflow-x: hidden;
-            max-height: 90vh;
+            max-height: calc(100vh - 10vh);
             flex-grow: 1;
-            border: 2%;
-            margin: 1%;
+            margin-left: 1%;
             text-align: left;
             h2{
                 text-decoration: underline;
