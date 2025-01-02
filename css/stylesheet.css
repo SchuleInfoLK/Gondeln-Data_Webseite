@@ -245,6 +245,7 @@ footer {
 }
 
 .seilbahn{
+    overflow: hidden;
     background-color: #a1e2f8;
     header{
         height:3%;
@@ -280,13 +281,13 @@ footer {
             }
             .pic-else{
                 img{
-                    width: 154vh;
+                    width: 150vh;
                     height: auto;
                 }
             }
             .pic-db{
                 img{
-                    max-width: calc(100vh - 25vh);
+                    max-width: calc(100vh - 30vh);
                     width: auto;
                     height: auto;
                 }
