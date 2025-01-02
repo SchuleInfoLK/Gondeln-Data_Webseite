@@ -295,7 +295,7 @@ footer {
         }
         .auswahl{
             color: rgb(2, 2, 99);
-            max-width: 10%;
+            max-width: 250;
             overflow-y: auto;
             overflow-x: hidden;
             max-height: 90vh;
