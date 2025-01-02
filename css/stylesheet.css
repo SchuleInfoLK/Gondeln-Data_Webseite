@@ -245,7 +245,7 @@ footer {
 }
 
 .seilbahn{
-    background-color: #74b1c6;
+    background-color: #a1e2f8;
     header{
         height:3%;
     }
@@ -294,6 +294,7 @@ footer {
             }
         }
         .auswahl{
+            color: rgb(2, 2, 99);
             max-width: 10%;
             overflow-y: auto;
             overflow-x: hidden;
@@ -308,13 +309,15 @@ footer {
                 font-weight: bold;
             }
             form[method="POST"]{
+                display: inline;
                 padding-right: 90%;
                 text-align: center;
                 button{
+                    border-radius: 4px;
                     background-color: white;
                     color: black;
                     padding: 15px 20px;
-                    border: 3px solid aqua;
+                    border: 3px solid white;
                     margin: 3px;
                     width: 200px;
                     height: 75px;
@@ -323,7 +326,9 @@ footer {
                     display: inline-block;
                 }
                 button:focus, button:hover{
-                    border: 3px #261ac5 solid;
+                    background-color: rgb(2, 2, 99);
+                    color: white;
+                    border: 3px rgb(2, 2, 99) solid;
                 }
             }
             

@@ -93,7 +93,7 @@ if ($db === false) {
                                         echo "<h3>Funitel</h3>";
                                         while ($row = $result->fetch_assoc()) {
                                             echo "<form method='POST'>";
-                                            echo "<button type='submit' name='id' id='btn-wahl' value='" . htmlspecialchars($row['id']) . "'>" . htmlspecialchars($row['name']) . "</button>";
+                                            echo "<button type='submit' name='id' value='" . htmlspecialchars($row['id']) . "'>" . htmlspecialchars($row['name']) . "</button>";
                                             echo "</form> ";
                                         }
                                         break;
@@ -111,7 +111,7 @@ if ($db === false) {
                                         echo "<h3>Einseilumlaufbahn</h3>";
                                         while ($row = $result->fetch_assoc()) {
                                             echo "<form method='POST'>";
-                                            echo "<button type='submit' name='id' id='btn-wahl' value='" . htmlspecialchars($row['id']) . "'>" . htmlspecialchars($row['name']) . "</button>";
+                                            echo "<button type='submit' name='id' value='" . htmlspecialchars($row['id']) . "'>" . htmlspecialchars($row['name']) . "</button>";
                                             echo "</form> ";
                                         }
                                         break;
@@ -119,7 +119,7 @@ if ($db === false) {
                                         echo "<h3>Pendelbahn</h3>";
                                         while ($row = $result->fetch_assoc()) {
                                             echo "<form method='POST'>";
-                                            echo "<button type='submit' name='id' id='btn-wahl' value='" . htmlspecialchars($row['id']) . "'>" . htmlspecialchars($row['name']) . "</button>";
+                                            echo "<button type='submit' name='id' value='" . htmlspecialchars($row['id']) . "'>" . htmlspecialchars($row['name']) . "</button>";
                                             echo "</form> ";
                                         }
                                         break;
@@ -148,7 +148,7 @@ if ($db === false) {
                                     case 5:
                                         echo "<h3>Schlepplifte</h3>";
                                         while ($row = $result->fetch_assoc()) {
-                                            echo "<form method='POST' style='display:inline;'>";
+                                            echo "<form method='POST' >";
                                             echo "<button type='submit' name='id' value='" . htmlspecialchars($row['id']) . "'>" . htmlspecialchars($row['name']) . "</button>";
                                             echo "</form> ";
                                         }
@@ -157,7 +157,7 @@ if ($db === false) {
                                     case 6:
                                         echo "<h3>2er-Sessellift</h3>";
                                         while ($row = $result->fetch_assoc()) {
-                                            echo "<form method='POST' style='display:inline;'>";
+                                            echo "<form method='POST' >";
                                             echo "<button type='submit' name='id' value='" . htmlspecialchars($row['id']) . "'>" . htmlspecialchars($row['name']) . "</button>";
                                             echo "</form> ";
                                         }
@@ -166,7 +166,7 @@ if ($db === false) {
                                     case 7:
                                         echo "<h3>4er-Sessellift</h3>";
                                         while ($row = $result->fetch_assoc()) {
-                                            echo "<form method='POST' style='display:inline;'>";
+                                            echo "<form method='POST' >";
                                             echo "<button type='submit' name='id' value='" . htmlspecialchars($row['id']) . "'>" . htmlspecialchars($row['name']) . "</button>";
                                             echo "</form> ";
                                         }
@@ -174,7 +174,7 @@ if ($db === false) {
                                     case 8:
                                         echo "<h3>6er-Sessellift</h3>";
                                         while ($row = $result->fetch_assoc()) {
-                                            echo "<form method='POST' style='display:inline;'>";
+                                            echo "<form method='POST' >";
                                             echo "<button type='submit' name='id' value='" . htmlspecialchars($row['id']) . "'>" . htmlspecialchars($row['name']) . "</button>";
                                             echo "</form> ";
                                         }
@@ -183,7 +183,7 @@ if ($db === false) {
                                     case 9:
                                         echo "<h3>8er-Sessellift</h3>";
                                         while ($row = $result->fetch_assoc()) {
-                                            echo "<form method='POST' style='display:inline;'>";
+                                            echo "<form method='POST' >";
                                             echo "<button type='submit' name='id' value='" . htmlspecialchars($row['id']) . "'>" . htmlspecialchars($row['name']) . "</button>";
                                             echo "</form> ";
                                         }
@@ -192,7 +192,7 @@ if ($db === false) {
                                     default:
                                         echo "<h3>Keine spezifische Kategorie für typ_db = {$i}</h3>";
                                         while ($row = $result->fetch_assoc()) {
-                                            echo "<form method='POST' style='display:inline;'>";
+                                            echo "<form method='POST' >";
                                             echo "<button type='submit' name='id' value='" . htmlspecialchars($row['id']) . "'>" . htmlspecialchars($row['name']) . "</button>";
                                             echo "</form> ";
                                         }
@@ -208,7 +208,7 @@ if ($db === false) {
                         if($result != NULL){
                             echo "<h2>Sonstige</h2>";
                             while ($row = $result->fetch_assoc()) {
-                                echo "<form method='POST' style='display:inline;'>";
+                                echo "<form method='POST' >";
                                 echo "<button type='submit' name='id' value='" . htmlspecialchars($row['id']) . "'>" . htmlspecialchars($row['name']) . "</button>";
                                 echo "</form> ";
                             }
@@ -228,65 +228,65 @@ if ($db === false) {
                                     if ($result && $result->num_rows > 0):
                                     while ($row = $result->fetch_assoc()): ?>
                                         <div class="pic-db">
-                                            <img src="<?= htmlspecialchars($row['Bildpfad']) ?>" alt="Bild Beförderungsmittel">
+                                            <img src="<?= htmlspecialchars($row['Bildpfad'] ?? '../images/icons/nopicture.png') ?>" alt="Bild <?= htmlspecialchars($row['Bildpfad'] ? $row['h1name'] : 'No picture') ?>">
                                         </div>
                                         <table>
-                                            <tr>
-                                                <td><div class="tablefest">Typ:</div></td>
-                                                <td><?= htmlspecialchars($row['Typ']) ?></td>
-                                            </tr>
-                                            <tr>
-                                                <td><div class="tablefest">Baujahr:</div></td>
-                                                <td><?= htmlspecialchars($row['Baujahr']) ?></td>
-                                            </tr>
-                                            <tr>
-                                                <td><div class="tablefest">Hersteller:</div></td>
-                                                <td><?= htmlspecialchars($row['Hersteller']) ?></td>
-                                            </tr>
-                                            <tr>
-                                                <td><div class="tablefest">Standort:</div></td>
-                                                <td><?= htmlspecialchars($row['Standort']) ?></td>
-                                            </tr>
-                                            <tr>
-                                                <td><div class="tablefest">Höhe Talstation:</div></td>
-                                                <td><?= htmlspecialchars($row['HTal']) ?> m</td>
-                                            </tr>
-                                            <tr>
-                                                <td><div class="tablefest">Höhe Bergstation:</div></td>
-                                                <td><?= htmlspecialchars($row['HBerg']) ?> m</td>
-                                            </tr>
-                                            <tr>
-                                                <td><div class="tablefest">Höhendifferenz:</div></td>
-                                                <td><?= htmlspecialchars($row['HDiff']) ?> m</td>
-                                            </tr>
-                                            <tr>
-                                                <td><div class="tablefest">Streckenlänge:</div></td>
-                                                <td><?= htmlspecialchars($row['HorizontLang']) ?> m</td>
-                                            </tr>
-                                            <tr>
-                                                <td><div class="tablefest">Bodenabstand:</div></td>
-                                                <td><?= htmlspecialchars($row['Bodenabstand']) ?> m</td>
-                                            </tr>
-                                            <tr>
-                                                <td><div class="tablefest">Fahrgeschwindigkeit:</div></td>
-                                                <td><?= htmlspecialchars($row['MaxSpeed']) ?> m/s</td>
-                                            </tr>
-                                            <tr>
-                                                <td><div class="tablefest">Fahrzeit:</div></td>
-                                                <td><?= htmlspecialchars($row['Fahrzeit']) ?> min</td>
-                                            </tr>
-                                            <tr>
-                                                <td><div class="tablefest">Max. Förderleistung:</div></td>
-                                                <td><?= htmlspecialchars($row['MaxFörderleistung']) ?> Pers/h</td>
-                                            </tr>
-                                            <tr>
-                                                <td><div class="tablefest">Personen pro Transportmittel:</div></td>
-                                                <td><?= htmlspecialchars($row['PersproMittel']) ?></td>
-                                            </tr>
-                                            <tr>
-                                                <td><div class="tablefest">Art der Garagierung:</div></td>
-                                                <td><?= htmlspecialchars($row['ArtGaragierung']) ?></td>
-                                            </tr>
+                                        <tr>
+                                            <td><div class="tablefest">Typ:</div></td>
+                                            <td><?= htmlspecialchars($row['Typ']) ?></td>
+                                        </tr>
+                                        <tr>
+                                            <td><div class="tablefest">Baujahr:</div></td>
+                                            <td><?= htmlspecialchars($row['Baujahr']) ?></td>
+                                        </tr>
+                                        <tr>
+                                            <td><div class="tablefest">Hersteller:</div></td>
+                                            <td><?= htmlspecialchars($row['Hersteller']) ?></td>
+                                        </tr>
+                                        <tr>
+                                            <td><div class="tablefest">Standort:</div></td>
+                                            <td><?= htmlspecialchars($row['Standort']) ?></td>
+                                        </tr>
+                                        <tr>
+                                            <td><div class="tablefest">Höhe Talstation:</div></td>
+                                            <td><?= $row['HTal'] !== null ? htmlspecialchars($row['HTal']) . ' m' : '-' ?></td>
+                                        </tr>
+                                        <tr>
+                                            <td><div class="tablefest">Höhe Bergstation:</div></td>
+                                            <td><?= $row['HBerg'] !== null ? htmlspecialchars($row['HBerg']) . ' m' : '-' ?></td>
+                                        </tr>
+                                        <tr>
+                                            <td><div class="tablefest">Höhendifferenz:</div></td>
+                                            <td><?= $row['HDiff'] !== null ? htmlspecialchars($row['HDiff']) . ' m' : '-' ?></td>
+                                        </tr>
+                                        <tr>
+                                            <td><div class="tablefest">Streckenlänge:</div></td>
+                                            <td><?= $row['HorizontLang'] !== null ? htmlspecialchars($row['HorizontLang']) . ' m' : '-' ?></td>
+                                        </tr>
+                                        <tr>
+                                            <td><div class="tablefest">Bodenabstand:</div></td>
+                                            <td><?= $row['Bodenabstand'] !== null ? htmlspecialchars($row['Bodenabstand']) . ' m' : '-' ?></td>
+                                        </tr>
+                                        <tr>
+                                            <td><div class="tablefest">Fahrgeschwindigkeit:</div></td>
+                                            <td><?= $row['MaxSpeed'] !== null ? htmlspecialchars($row['MaxSpeed']) . ' m/s' : '-' ?></td>
+                                        </tr>
+                                        <tr>
+                                            <td><div class="tablefest">Fahrzeit:</div></td>
+                                            <td><?= $row['Fahrzeit'] !== null ? htmlspecialchars($row['Fahrzeit']) . ' min' : '-' ?></td>
+                                        </tr>
+                                        <tr>
+                                            <td><div class="tablefest">Max. Förderleistung:</div></td>
+                                            <td><?= $row['MaxFörderleistung'] !== null ? htmlspecialchars($row['MaxFörderleistung']) . ' Pers/h' : '-' ?></td>
+                                        </tr>
+                                        <tr>
+                                            <td><div class="tablefest">Personen pro Transportmittel:</div></td>
+                                            <td><?= htmlspecialchars($row['PersproMittel'] ?? '-') ?></td>
+                                        </tr>
+                                        <tr>
+                                            <td><div class="tablefest">Art der Garagierung:</div></td>
+                                            <td><?= htmlspecialchars($row['ArtGaragierung'] ?? '-') ?></td>
+                                        </tr>
                                             <tr>
                                                 <td><div class="tablefest">Kuppelbar:</div></td>
                                                 <td>
@@ -305,7 +305,7 @@ if ($db === false) {
                                             </tr>
                                             <tr>
                                                 <td><div class="tablefest">Besonderheiten:</div></td>
-                                                <td><?= htmlspecialchars($row['Besonderheiten']) ?></td>
+                                                <td><?= htmlspecialchars($row['Besonderheiten'] ?? '-') ?></td>
                                             </tr>
                                         </table>
                                     <?php endwhile; ?>
