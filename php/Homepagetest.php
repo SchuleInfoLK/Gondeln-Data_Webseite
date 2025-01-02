@@ -291,8 +291,8 @@ if ($db === false) {
                                                 <td><div class="tablefest">Kuppelbar:</div></td>
                                                 <td>
                                                     <?= $row['Kuppelbar'] 
-                                                        ? '<img src="../images/icons/check.png" alt="Vorhanden" height="20px">' 
-                                                        : '<img src="../images/icons/cross.png" alt="Nicht Vorhanden" height="20px">' ?>
+                                                        ? '<img src="../images/icons/check.png" alt="Vorhanden" height="30px">' 
+                                                        : '<img src="../images/icons/cross.png" alt="Nicht Vorhanden" height="30px">' ?>
                                                 </td>
                                             </tr>
                                             <tr>
@@ -324,7 +324,7 @@ if ($db === false) {
                 </p>
                 <p>&copy; 2024-2025 Philipp Uhlendorf</p>
                 <p>
-                    <a href="../php/Homepage.php">Datenschutz</a>
+                    <a href="../html/Datenschutz.html">Datenschutz</a>
                 </p>
             </footer>
         </div>

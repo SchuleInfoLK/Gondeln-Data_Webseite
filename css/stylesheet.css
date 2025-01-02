@@ -245,6 +245,7 @@ footer {
 }
 
 .seilbahn{
+    background-color: #74b1c6;
     header{
         height:3%;
     }
@@ -275,6 +276,12 @@ footer {
                 .tablefest{
                     text-align: right;
                     margin-right: 20px;
+                }
+            }
+            .pic-else{
+                img{
+                    width: 93%;
+                    height: auto;
                 }
             }
             .pic-db{
