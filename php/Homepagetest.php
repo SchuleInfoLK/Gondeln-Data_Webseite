@@ -227,50 +227,86 @@ if ($db === false) {
 
                                     if ($result && $result->num_rows > 0):
                                     while ($row = $result->fetch_assoc()): ?>
+                                        <div class="pic-db">
+                                            <img src="<?= htmlspecialchars($row['Bildpfad']) ?>" alt="Bild Beförderungsmittel">
+                                        </div>
                                         <table>
-                                            <thead>
-                                                <tr>
-                                                    <th>Baujahr</th>
-                                                    <th>Typ</th>
-                                                    <th>Standort</th>
-                                                    <th>Hersteller</th>
-                                                    <th>Höhe Talstation in m</th>
-                                                    <th>Höhe Bergstation in m</th>
-                                                    <th>Höhendifferenz in m</th>
-                                                    <th>Streckenlänge in m</th>
-                                                    <th>Bodenabstand in m</th>
-                                                    <th>Fahrgeschwindigkeit Strecke in m/s</th>
-                                                    <th>Max. Förderleistung in Pers/h</th>
-                                                    <th>Fahrzeit in min</th>
-                                                    <th>Personen pro Transportmittel</th>
-                                                    <th>Art der Garagierung</th>
-                                                    <th>Kuppelbar</th>
-                                                    <th>Sitzheizung</th>
-                                                </tr>
-                                            </thead>
-                                            <tbody>
-                                                <div class="pic-db">
-                                                    <img src= <?=htmlspecialchars($row['Bildpfad'])?> alt="Bild Beförderungsmittel">
-                                                </div>
-                                                    <tr>
-                                                        <td><?= htmlspecialchars($row['Baujahr']) ?></td>
-                                                        <td><?= htmlspecialchars($row['Typ']) ?></td>
-                                                        <td><?= htmlspecialchars($row['Standort']) ?></td>
-                                                        <td><?= htmlspecialchars($row['Hersteller']) ?></td>
-                                                        <td><?= htmlspecialchars($row['HTal']) ?></td>
-                                                        <td><?= htmlspecialchars($row['HBerg']) ?></td>
-                                                        <td><?= htmlspecialchars($row['HDiff']) ?></td>
-                                                        <td><?= htmlspecialchars($row['HorizontLang']) ?></td>
-                                                        <td><?= htmlspecialchars($row['Bodenabstand']) ?></td>
-                                                        <td><?= htmlspecialchars($row['MaxSpeed']) ?></td>
-                                                        <td><?= htmlspecialchars($row['MaxFörderleistung']) ?></td>
-                                                        <td><?= htmlspecialchars($row['Fahrzeit']) ?></td>
-                                                        <td><?= htmlspecialchars($row['PersproMittel']) ?></td>
-                                                        <td><?= htmlspecialchars($row['ArtGaragierung']) ?></td>
-                                                        <td><div class="iconstf"><?= $row['Kuppelbar'] ? '<img src= "../images/icons/check.png" alt="Vorhanden" height="30px">' : '<img src= "../images/icons/cross.png" alt="Nicht Vorhanden" height="30px">' ?></div></td>
-                                                        <td><div class="iconstf"><?= $row['Sitzheizung'] ? '<img src= "../images/icons/check.png" alt="Vorhanden" height="30px">' : '<img src= "../images/icons/cross.png" alt="Nicht Vorhanden" height="30px">' ?></div></td>
-                                                    </tr>
-                                            </tbody>
+                                            <tr>
+                                                <td><div class="tablefest">Typ:</div></td>
+                                                <td><?= htmlspecialchars($row['Typ']) ?></td>
+                                            </tr>
+                                            <tr>
+                                                <td><div class="tablefest">Baujahr:</div></td>
+                                                <td><?= htmlspecialchars($row['Baujahr']) ?></td>
+                                            </tr>
+                                            <tr>
+                                                <td><div class="tablefest">Hersteller:</div></td>
+                                                <td><?= htmlspecialchars($row['Hersteller']) ?></td>
+                                            </tr>
+                                            <tr>
+                                                <td><div class="tablefest">Standort:</div></td>
+                                                <td><?= htmlspecialchars($row['Standort']) ?></td>
+                                            </tr>
+                                            <tr>
+                                                <td><div class="tablefest">Höhe Talstation:</div></td>
+                                                <td><?= htmlspecialchars($row['HTal']) ?> m</td>
+                                            </tr>
+                                            <tr>
+                                                <td><div class="tablefest">Höhe Bergstation:</div></td>
+                                                <td><?= htmlspecialchars($row['HBerg']) ?> m</td>
+                                            </tr>
+                                            <tr>
+                                                <td><div class="tablefest">Höhendifferenz:</div></td>
+                                                <td><?= htmlspecialchars($row['HDiff']) ?> m</td>
+                                            </tr>
+                                            <tr>
+                                                <td><div class="tablefest">Streckenlänge:</div></td>
+                                                <td><?= htmlspecialchars($row['HorizontLang']) ?> m</td>
+                                            </tr>
+                                            <tr>
+                                                <td><div class="tablefest">Bodenabstand:</div></td>
+                                                <td><?= htmlspecialchars($row['Bodenabstand']) ?> m</td>
+                                            </tr>
+                                            <tr>
+                                                <td><div class="tablefest">Fahrgeschwindigkeit:</div></td>
+                                                <td><?= htmlspecialchars($row['MaxSpeed']) ?> m/s</td>
+                                            </tr>
+                                            <tr>
+                                                <td><div class="tablefest">Fahrzeit:</div></td>
+                                                <td><?= htmlspecialchars($row['Fahrzeit']) ?> min</td>
+                                            </tr>
+                                            <tr>
+                                                <td><div class="tablefest">Max. Förderleistung:</div></td>
+                                                <td><?= htmlspecialchars($row['MaxFörderleistung']) ?> Pers/h</td>
+                                            </tr>
+                                            <tr>
+                                                <td><div class="tablefest">Personen pro Transportmittel:</div></td>
+                                                <td><?= htmlspecialchars($row['PersproMittel']) ?></td>
+                                            </tr>
+                                            <tr>
+                                                <td><div class="tablefest">Art der Garagierung:</div></td>
+                                                <td><?= htmlspecialchars($row['ArtGaragierung']) ?></td>
+                                            </tr>
+                                            <tr>
+                                                <td><div class="tablefest">Kuppelbar:</div></td>
+                                                <td>
+                                                    <?= $row['Kuppelbar'] 
+                                                        ? '<img src="../images/icons/check.png" alt="Vorhanden" height="20px">' 
+                                                        : '<img src="../images/icons/cross.png" alt="Nicht Vorhanden" height="20px">' ?>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td><div class="tablefest">Sitzheizung:</div></td>
+                                                <td>
+                                                    <?= $row['Sitzheizung'] 
+                                                        ? '<img src="../images/icons/check.png" alt="Vorhanden" height="30px">' 
+                                                        : '<img src="../images/icons/cross.png" alt="Nicht Vorhanden" height="30px">' ?>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td><div class="tablefest">Besonderheiten:</div></td>
+                                                <td><?= htmlspecialchars($row['Besonderheiten']) ?></td>
+                                            </tr>
                                         </table>
                                     <?php endwhile; ?>
                                 <?php endif;
@@ -288,7 +324,7 @@ if ($db === false) {
                 </p>
                 <p>&copy; 2024-2025 Philipp Uhlendorf</p>
                 <p>
-                    <a href="../php/Homepagetest.php">Datenschutz</a>
+                    <a href="../php/Homepage.php">Datenschutz</a>
                 </p>
             </footer>
         </div>

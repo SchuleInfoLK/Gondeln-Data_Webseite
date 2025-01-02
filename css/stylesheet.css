@@ -252,23 +252,29 @@ footer {
         display: flex;
         justify-content: space-between;
         .gondel{
+            text-align: center;
+            overflow-y: auto;
+            overflow-x: hidden;
+            max-height: 90vh;
+            flex-grow: 1;
             flex-shrink: 0;
             position: sticky;
             margin: 1%;
             max-width: 85%;
             table{
+                font-size: larger;
+                display: flex;
+                justify-content: center;
+                max-width: 50%;
                 margin: 1%;
+                margin-left: 25%;
                 text-align: center;
                 width: 90%;
                 height: 50px;
                 padding-right: 1%;
-                border: 3px solid;
-                border-collapse: collapse;
-                td, th{
-                    border-left: 3px solid;
-                    border-top: 1.5px dashed;
-                    border-collapse: collapse;
-                    margin: 5px;
+                .tablefest{
+                    text-align: right;
+                    margin-right: 20px;
                 }
             }
             .pic-db{
