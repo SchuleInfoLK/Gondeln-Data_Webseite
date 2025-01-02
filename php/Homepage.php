@@ -1,5 +1,15 @@
 <?php
 require_once "config.php";
+
+if (!file_exists(__FILE__)) { echo "<script>alert('Die Datei kann nicht ausgeführt werden!');
+    </script>"; echo "<script>window.location.href = '../html/Home.html';</script>";
+    exit(); 
+} 
+if ($db->connect_error) { 
+    echo "<script>alert('Datenbankverbindung fehlgeschlagen: " . $db->connect_error . "');</script>";
+    echo "<script>window.location.href = 'deine_seite.html';</script>";
+    exit();
+} 
 ?>
 
 <!DOCTYPE html>
@@ -16,7 +26,33 @@ require_once "config.php";
     <body>
         <div class="seilbahn">
             <header>
-                <h1>Willkommen</h1>
+                <?php if ($_SERVER['REQUEST_METHOD'] === 'POST'){
+                                if (isset($_POST['id'])){
+                                    $id = intval($_POST['id']); 
+                                    $stmt = $db->prepare("SELECT * FROM SeilbahnDaten WHERE id = ?");
+                                    if ($stmt) {
+                                        $stmt->bind_param("i", $id);
+                                        $stmt->execute();
+                                        $result = $stmt->get_result();
+                            
+                                        if ($result && $result->num_rows > 0) {
+                                            $row = $result->fetch_assoc();
+                                            echo "<h1>" . htmlspecialchars($row['h1name']) . "</h1>";
+                                        } else {
+                                            echo "Keine Ergebnisse gefunden.";
+                                        }
+                            
+                                        $stmt->close();
+                                    } else {
+                                        echo "Datenbankabfrage fehlgeschlagen.";
+                                    }
+                                } else {
+                                    echo "Ungültige ID.";
+                                }
+                            }else{
+                                echo "<h1>Willkommen</h1>";
+                            }
+                ?>
                 <div id="logout">
                     <input type="submit" class="btn-teriträr" name="submit" value="Anmelden" id="btn-login" >
                 </div>
@@ -25,7 +61,7 @@ require_once "config.php";
                 <div class="auswahl">
                     <?php 
                         echo "<h2>Kabinenbahnen</h2>";
-                        for ($i = 0; $i <= 3; $i++) {
+                        for ($i = 0; $i <= 4; $i++) {
                             $stmt = $db->prepare("SELECT name, id FROM SeilbahnDaten WHERE typ_db = ?");
                             $stmt->bind_param("i", $i);
                             $stmt->execute();
@@ -236,8 +272,30 @@ require_once "config.php";
         </div>
         
         <script>
-            document.getElementById('btn-login').addEventListener('click', function() {
+            document.getElementById('btn-login').addEventListener('click', function() {//Zum Login wechseln
                 window.location.href = 'http://localhost/Project_C37592B/php/login.php';
+            });
+
+            document.addEventListener("DOMContentLoaded", function () {//Scrollbar nach wechsel von class gondeln wieder auf vorherige Position setzten
+                const auswahlContainer = document.querySelector('.seilbahn .auswahl');
+                const scrollPositionKey = 'auswahlScrollPosition';
+                const savedPosition = sessionStorage.getItem(scrollPositionKey);
+
+                if (savedPosition) {
+                    auswahlContainer.scrollTop = parseInt(savedPosition, 10);
+                }
+
+                auswahlContainer.addEventListener('scroll', () => {
+                    sessionStorage.setItem(scrollPositionKey, auswahlContainer.scrollTop);
+                });
+
+                document.querySelectorAll('.seilbahn .auswahl button').forEach(button => {
+                    button.addEventListener('click', () => {
+                        setTimeout(() => {
+                            auswahlContainer.scrollTop = parseInt(sessionStorage.getItem(scrollPositionKey), 10);
+                        }, 100); 
+                    });
+                });
             });
         </script>
     </body>

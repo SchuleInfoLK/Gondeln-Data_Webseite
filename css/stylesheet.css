@@ -245,11 +245,17 @@ footer {
 }
 
 .seilbahn{
+    header{
+        height:3%;
+    }
     main{
         display: flex;
         justify-content: space-between;
         .gondel{
+            flex-shrink: 0;
+            position: sticky;
             margin: 1%;
+            max-width: 85%;
             table{
                 margin: 1%;
                 text-align: center;
@@ -275,9 +281,14 @@ footer {
             }
         }
         .auswahl{
+            max-width: 10%;
+            overflow-y: auto;
+            overflow-x: hidden;
+            max-height: 90vh;
+            flex-grow: 1;
             border: 2%;
             margin: 1%;
-            text-align: center;
+            text-align: left;
             h2{
                 text-decoration: underline;
                 font-size: 30px;
@@ -290,7 +301,7 @@ footer {
                     background-color: white;
                     color: black;
                     padding: 15px 20px;
-                    border: 3px solid rgb(42, 49, 183);
+                    border: 3px solid aqua;
                     margin: 3px;
                     width: 200px;
                     height: 75px;
@@ -299,11 +310,11 @@ footer {
                     display: inline-block;
                 }
                 button:focus, button:hover{
-                    border: 3px #3481b1 solid;
+                    border: 3px #261ac5 solid;
                 }
             }
             
-        }  
+        } 
     }
     
 }
