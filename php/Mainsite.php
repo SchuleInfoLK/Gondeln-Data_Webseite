@@ -42,7 +42,7 @@ if(!isset($_SESSION["userid"]) || $_SESSION["userid"] !== false){
         <p>
             <a href="../html/Impressum.html">Impressum</a>
             </p>
-            <p>&copy; 2024 Philipp Uhlendorf</p>
+            <p>&copy; 2024-2025 Philipp Uhlendorf</p>
             <p>
                 <a href="../html/Datenschutz.html">Datenschutz</a>
             </p>

@@ -1,10 +1,22 @@
 body {
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
     margin: 0;
     padding: 0;
     background-color: white;
 }
 
 header {
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
     display: flex;
     padding: 10px;
     text-align: center;
@@ -12,6 +24,7 @@ header {
     background-color: #333;
     color: white;
     top: 0;
+    z-index: 1000;
     margin: 0;
     padding: 0;
     width: 100%;
@@ -45,17 +58,25 @@ main{
 }
 
 footer {
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    overflow: visible;
     display: flex;
     justify-content: space-around;
     padding: 10px;
     text-align: center;
     background-color: #333;
     color: white;
+    z-index: 1000;
     margin: 0;
     padding: 0;
     bottom: 0;
     width: 100%;
-    position: absolute;
+    position: fixed;
     a{
         color: white;
     }
@@ -224,50 +245,93 @@ footer {
 }
 
 .seilbahn{
+    overflow: hidden;
+    background-color: #a1e2f8;
+    header{
+        height:3%;
+    }
     main{
         display: flex;
+        justify-content: space-between;
         .gondel{
-            justify-content: right;
+            text-align: center;
+            overflow-y: auto;
+            overflow-x: hidden;
+            max-height: calc(100vh - 11vh);
+            flex-grow: 1;
+            flex-shrink: 0;
+            position: sticky;
+            margin: 1%;
+            max-width: calc(100% - 350px);
             table{
+                font-size: clamp(11px, 0.7vw, 20px);
+                display: flex;
+                justify-content: center;
+                max-width: 50%;
+                margin: 1%;
+                margin-left: 25%;
                 text-align: center;
-                width: 100%;
-                padding-left: 5%;
+                width: 90%;
+                height: 50px;
                 padding-right: 1%;
+                .tablefest{
+                    text-align: right;
+                    margin-right: 20px;
+                }
+            }
+            .pic-else{
+                img{
+                    width: 150vh;
+                    height: auto;
+                }
             }
             .pic-db{
                 img{
-
-                    width: 30%;
+                    max-width: calc(100vh - 30vh);
+                    width: auto;
                     height: auto;
                 }
             }
         }
-        .auswal{
-            justify-content: left;
+        .auswahl{
+            color: rgb(2, 2, 99);
+            max-width: 300px;
+            overflow-y: auto;
+            overflow-x: hidden;
+            max-height: calc(100vh - 10vh);
+            flex-grow: 1;
+            margin-left: 1%;
             text-align: left;
             h2{
-                color: #3300ff;
+                text-decoration: underline;
+                font-size: 30px;
+                font-weight: bold;
             }
-            h3{
-                text-decoration: none;
+            form[method="POST"]{
+                display: inline;
+                padding-right: 90%;
+                text-align: center;
+                button{
+                    border-radius: 4px;
+                    background-color: white;
+                    color: black;
+                    padding: 15px 20px;
+                    border: 3px solid white;
+                    margin: 3px;
+                    width: 200px;
+                    height: 75px;
+                    font-size: 16px;
+                    text-align: center;
+                    display: inline-block;
+                }
+                button:focus, button:hover{
+                    background-color: rgb(2, 2, 99);
+                    color: white;
+                    border: 3px rgb(2, 2, 99) solid;
+                }
             }
-            form{
-                padding-right: 95%;
-                text-align: left;
-                justify-content: left;
-                
-            }
-            button{
-                background-color: white;
-                color: black;
-                padding: 12px 28px;;
-            }
-            button:focus, button:hover{
-                background-color: black;
-                color: white;
-                padding: 12px 28px;
-            }
-        }  
+            
+        } 
     }
     
 }
