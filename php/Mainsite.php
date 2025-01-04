@@ -29,7 +29,7 @@ if(!isset($_SESSION["userid"]) || $_SESSION["userid"] !== false){
         </header>
         <main>
             <div class="flex-container">
-                <div id="bildverzeichnis">
+                <div id="test">
                     <p>Test</p>
                 </div>
                 <div id="functions">
@@ -54,6 +54,6 @@ if(!isset($_SESSION["userid"]) || $_SESSION["userid"] !== false){
             document.getElementById('btn-register').addEventListener('click', function(){
                 window.location.href = 'http://localhost/Project_C37592B/php/register.php';
             });
-        </script>";
+        </script>
     </body>
 </html>

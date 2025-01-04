@@ -90,12 +90,16 @@ footer {
     flex-direction: row;
     text-align: center;
     justify-content: space-around;
-    .btn-quarter{
-        background-color: #4b4b4b;
-        color: white;
-    }
-    .btn-quarter:hover{
-        border: 3px solid black;
+    #functions{
+        .btn-quarter{
+            margin-top: 2vh;
+            padding: 20px 40px;
+            background-color: #4b4b4b;
+            color: white;
+        }
+        .btn-quarter:hover{
+            border: 3px solid black;
+        }
     }
 }
 
@@ -105,12 +109,12 @@ footer {
     background-repeat: no-repeat;
     background-size: 100%, auto;
     #loginbody{
+        display: flex;
         min-height: 100vh;
         margin: 0;
         flex-direction: column;
         text-align: center;
         justify-content: space-around;
-        display: flex;
         position: sticky;
         .form-group{
             h1{
@@ -120,8 +124,7 @@ footer {
                 font-size: 75px;
             }
             input[name="email"]{
-                width: 25%;
-                padding: 12px 20px;
+                padding: 12px calc(125vh - 50%);
                 margin: 8px 0;
                 box-sizing: border-box;
                 border: 2px solid black;
@@ -132,8 +135,7 @@ footer {
                 padding-left: 40px
             }
             input[name="password"]{
-                width: 25%;
-                padding: 12px 20px;
+                padding: 12px calc(125vh - 50%);
                 margin: 8px 0;
                 box-sizing: border-box;
                 border: 2px solid black;
@@ -154,7 +156,7 @@ footer {
                 justify-content: space-around;
                 text-align: center;
                 margin-left: 30%;
-                margin-right: 30%;
+                margin-right: 30%;  
                 .btn-primary{
                     background-color: white;
                     color: #333;
@@ -231,6 +233,7 @@ footer {
 }
 
 #welcome {
+    overflow: hidden;
     margin: 0;
     height: 100vh;
     display: flex;
@@ -239,6 +242,7 @@ footer {
     color: white;
     text-align: center;
     font-size: 200%;
+    font-size: clamp(25px, 1vw, 45px);
     background-image: url("../images/background/skiweltbahn.JPG");
     background-repeat: no-repeat;
     background-size: 100%, auto;
