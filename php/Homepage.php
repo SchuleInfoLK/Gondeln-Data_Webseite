@@ -17,6 +17,10 @@
             -Download and install XAMPP from https://www.apachefriends.org/download.html
             -Start the Apache server and place the folder in the directory: "C:\xampp\htdocs"
             -Then open your browser and go to: localhost/"foldername"/"filename"."fileextension"
+
+    
+    Sollte ein Datenbankfehler vorliegen öffnen sie die ../html/error.html Datei
+    If a database error occurs, open the ../html/error.html file.
 ---------------------------------------------------------------------------------------------------------*/
 
 use PSpell\Config;
@@ -361,7 +365,7 @@ if ($db === false) {
         Kabinenbahnen
             1 = Funitel
             2 = 3S-Bahn
-            3 = Einsilumlaufbahn
+            3 = Einseilumlaufbahn
             4 = Pendelbahn
         
         Sessellifte

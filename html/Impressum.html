@@ -11,6 +11,9 @@
     <body>
         <header>
             <h1><b>Impressum</b></h1>
+            <div id="logout">
+                <input type="submit" class="btn-teriträr" name="submit" value="Zurück" id="btn-back" >
+            </div>
         </header>
 
         <main>
@@ -22,11 +25,10 @@
                     <br>  
                     Philipp Uhlendorf
                     <br>
-                    <br>  
                     Adresse
                     <br>
-                    <br>  
-                    PLZ & Ort
+                    Straße
+                    Postleitzahl & Ort
                     <br>  
                     Germany
                     <br> 
@@ -34,17 +36,14 @@
                     <br>
                     <p>Bei Fragen oder Anregungen bitte</p><h4>per E-Mail an:&#160 &#160 <b><a href="mailto:pu-ol@gmx.de">pu-ol@gmx.de</a></b></h4>
                     <br>
-                    <br>  
                     <h2>Verantwortlicher gemäß § 55 Abs. 2 RStV</h2>
                     <h4> Philipp Uhlendorf </h4>
-                    <br>
                     <br>    
                     Plattform der EU-Kommission zur Online-Streitbeilegung: <a href="https://www.ec.europa.eu/consumers/odr ">ec.europa.eu/consumers/odr </a>
                     <br>
                     <br>
                     Der Ersteller dieser Webseite ist weder zur Teilnahme an einem Streitbeilegungsverfahren vor einer Verbraucherschlichtungsstelle  verpflichtet noch bereit.
                     <br>
-                    <br>  
                     <h2>Haftungsausschluss:</h2>
                     <br>
                     <h3>Es wird nicht gehaftet für unrichtige Angaben, Übertragungsfehler, technische Verfügbarkeit, externe Inhalte sowie Folgeschäden jeglicher Art.<br>Alle Angaben ohne Gewähr.&#160 &#160 Alle Rechte vorbehalten</h3>
@@ -57,10 +56,15 @@
             <p>
                 <a href="../html/Impressum.html">Impressum</a>
             </p>
-            <p>&copy; 2024 Philipp Uhlendorf</p>
+            <p>&copy; 2024-2025 Philipp Uhlendorf</p>
             <p>
                 <a href="../html/Datenschutz.html">Datenschutz</a>
             </p>
         </footer>
+        <script>
+            document.getElementById('btn-back').addEventListener('click', function() {//Zum Login wechseln
+                window.location.href = 'http://localhost/Project_C37592B/php/Homepage.php';
+            });
+        </script>
     </body>
 </html>

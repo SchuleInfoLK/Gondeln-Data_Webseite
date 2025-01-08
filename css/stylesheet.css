@@ -89,16 +89,94 @@ footer {
     display: flex;
     flex-direction: row;
     text-align: center;
-    justify-content: space-around;
+    justify-content: space-between;
+    background-image: url("../images/background/panoischgl.jpg");
+    background-repeat: no-repeat;
+    background-size: 100%, auto;
     #functions{
+        padding: 1.5vh;
+        background-color: #8b8b8b;
         .btn-quarter{
             margin-top: 2vh;
             padding: 20px 40px;
             background-color: #4b4b4b;
             color: white;
+            width: 350px;
         }
         .btn-quarter:hover{
             border: 3px solid black;
+        }
+    }
+    #reg-bahn{
+        direction: ltr;
+        display: flex;
+        flex-direction: column;
+        background-color: #8b8b8b;
+        overflow-y: auto;
+        overflow-x: hidden;
+        max-height: calc(100vh - 16vh);
+        justify-items: center;
+        padding: 1.5vh;
+        .bahn-form{
+            justify-items: center;
+            input, button{
+                border: 3px solid #333;
+                margin: 0.25vh;
+                text-align: center;
+                width: 30vh;
+                padding: 1vh 2vh;
+            }
+            select{
+                border: 3px solid #333;
+                margin: 0.3vh;
+                text-align: center;
+                width: 35vh;
+                padding: 1vh 2vh;
+            }
+            .btn-bahn-submit{
+                margin-top: 1vh;
+                input, button{
+                    text-align: center;
+                    width: 15vh;
+                    padding: 1vh 2vh;
+                }
+            }
+            .check-bahn{
+                width: 35vh;
+                text-align: center;
+                padding: 3vh;
+                input[type="checkbox"]{
+                    justify-content: center;
+                    text-align: center;
+                    max-width: 4vh;
+                    height: 4vh;
+                    appearance: none;
+                    -webkit-appearance: none;
+                    background-image: url("../images/icons/cross.png");
+                    background-repeat: no-repeat;
+                    background-size: 100%, auto;
+                    background-position: center;
+                    border: hidden;
+                }
+                input[type="checkbox"]:checked{
+                    background-image: url("../images/icons/check.png");
+                }
+            }
+            .error{
+                text-align: center;
+                color: rgb(255, 46, 46);
+                background-color: #333;
+                border: 3px solid gray;
+                max-width: 35vh;
+                position: sticky;
+            }
+            .success {
+                text-align: center;
+                color: green;
+                font-size: clamp(17px, 0.7vw, 26px);
+                text-size-adjust: 10px;
+                position: sticky;
+            }
         }
     }
 }
@@ -268,7 +346,7 @@ footer {
             margin: 1%;
             max-width: calc(100% - 350px);
             table{
-                font-size: clamp(11px, 0.7vw, 20px);
+                font-size: clamp(17px, 0.7vw, 26px);
                 display: flex;
                 justify-content: center;
                 max-width: 50%;
@@ -291,6 +369,7 @@ footer {
             }
             .pic-db{
                 img{
+                    max-height: calc(100vh - 70vh);
                     max-width: calc(100vh - 30vh);
                     width: auto;
                     height: auto;
