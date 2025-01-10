@@ -2,6 +2,11 @@
 require_once "config.php";
 session_start();
 
+if (!isset($_SESSION["userid"]) || $_SESSION["userid"] === false) {
+    header("location: login.php");
+    exit;
+}
+
 $userid = $_SESSION["userid"];
 $query = "SELECT * FROM users WHERE id = ?";
 $stmt = $db->prepare($query);
@@ -30,7 +35,6 @@ $user = $result->fetch_assoc();
 
 </html>
 <?php
-session_start();
 
 if(!isset($_SESSION["userid"]) || $_SESSION["userid"] !== false){
     header("Refresh:2; url= ../php/Mainsite.php");

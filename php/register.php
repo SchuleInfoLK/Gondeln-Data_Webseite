@@ -1,11 +1,9 @@
 <?php
 session_start();
 
-if(!isset($_SESSION["userid"]) || $_SESSION["userid"] !== false){
-   
-}else{
+if (!isset($_SESSION["userid"]) || $_SESSION["userid"] === false) {
     header("location: login.php");
-   exit;
+    exit;
 }
 
 require_once "config.php";
