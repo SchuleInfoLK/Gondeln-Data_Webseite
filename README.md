@@ -1,6 +1,6 @@
 # Project_C37592B
 
-#Hinweis zur Nutzung:
+Hinweis zur Nutzung:
 Die Webseite MUSS auf einem (Lokalen-)Server ligen um vollständig zu funktionieren, um PHP und MySQL ausführen können.
 
 #Anleitung zur Nutzung mit einem Lokalenwebserver mit XAMPP
