@@ -20,4 +20,4 @@ Anleitung zur Nutzung mit einem Lokalenwebserver mit XAMPP
     - Wiederholen Sie die letzten beiden Schritte mit der Datei: "SeilbahnDaten.sql.gz"
     - Rufen Sie dann im Browser: "../php/Homepage.php" auf
 
-4. Anschließend sollte die Webseite angezeigt werden und durch die Nutzung der Buttons verschiedene Seilbahnen mit Daten angezeigt werden sollten
+3. Anschließend sollte die Webseite angezeigt werden und durch die Nutzung der Buttons verschiedene Seilbahnen mit Daten angezeigt werden sollten
