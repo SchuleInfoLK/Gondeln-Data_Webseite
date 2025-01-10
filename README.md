@@ -3,7 +3,7 @@
 Hinweis zur Nutzung:
 Die Webseite MUSS auf einem (Lokalen-)Server ligen um vollständig zu funktionieren, um PHP und MySQL ausführen können.
 
-#Anleitung zur Nutzung mit einem Lokalenwebserver mit XAMPP
+Anleitung zur Nutzung mit einem Lokalenwebserver mit XAMPP
 
 1. Nutzung von PHP
     -Laden Sie und instalieren Sie XAMPP von "https://www.apachefriends.org/download.html"
