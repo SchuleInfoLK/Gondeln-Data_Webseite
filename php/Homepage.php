@@ -23,8 +23,6 @@
     If a database error occurs, open the ../html/error.html file.
 ---------------------------------------------------------------------------------------------------------*/
 
-use PSpell\Config;
-
 require_once "config.php";
 
 $db = mysqli_connect(DBSERVER, DBUSERNAME, DBPASSWORD, DBNAME);
@@ -50,6 +48,9 @@ if ($db === false) {
     <body>
         <div class="seilbahn">
             <header>
+                <div id="tohub">
+                    <input type="submit" class="btn-teriträr" name="submit" value="Zur Seitenauswahl" id="btn-tohub" >
+                </div>
                 <?php if ($_SERVER['REQUEST_METHOD'] === 'POST'){
                                 if (isset($_POST['id'])){
                                     $id = intval($_POST['id']); 
@@ -338,7 +339,12 @@ if ($db === false) {
                 window.location.href = 'http://localhost/Project_C37592B/php/login.php';
             });
 
-            document.addEventListener("DOMContentLoaded", function () {//Scrollbar nach wechsel von class gondeln wieder auf vorherige Position setzten
+            document.getElementById('btn-tohub').addEventListener('click', function() {//Zur Seitenauswahl wechseln
+                alert('Bitte Link anpassen');
+                window.location.href = '';//Link anpassen
+            });
+
+            document.addEventListener("DOMContentLoaded", function () {
                 const auswahlContainer = document.querySelector('.seilbahn .auswahl');
                 const scrollPositionKey = 'auswahlScrollPosition';
                 const savedPosition = sessionStorage.getItem(scrollPositionKey);
