@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" type="text/css" href="../css/stylesheet.css" />
-    <title>Home</title>
+    <title>Abmelden</title>
     <link rel="icon" type="image/jpg"
 		  href="../images/icons/cable-car.png">
 </head>
@@ -13,6 +13,9 @@
     <div id="welcome">
         <h1>Sie wurden erforlgreich abgemeldet</h1> 
     </div>
+    <script>
+        sessionStorage.clear();
+    </script>
 </body>
 
 </html>

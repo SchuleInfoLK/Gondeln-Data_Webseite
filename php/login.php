@@ -25,6 +25,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST['submit'])){
                 if(password_verify($password, $row['password'])){
                     $_SESSION["userid"] = $row['id'];
                     $_SESSION["user"] = $row;
+                    $_SESSION["email"] = $row['email'];
                     header("Location: ../php/welcome.php");
                     exit;
                 }else{

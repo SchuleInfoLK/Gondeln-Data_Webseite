@@ -318,7 +318,7 @@ if ($db === false) {
                                 }
                             mysqli_close($db);
                     }else{
-                        echo '<div class="pic-else"><img src= "../images/background/skiweltbahn.jpg""></div>';
+                        echo '<div class="pic-else"><img src= "../images/background/skiweltbahn.jpg" alt="Skiweltbahn Bild als Platzhalter"></div>';
                     } 
                     ?>
                 </div>

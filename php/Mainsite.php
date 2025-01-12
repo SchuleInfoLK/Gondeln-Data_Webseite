@@ -14,7 +14,8 @@ require_once "config.php";
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="stylesheet" type="text/css" href="../css/stylesheet.css" />
-        <title>Home</title>
+        <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+        <title>Administrativer Bereich</title>
         <link rel="icon" type="image/jpg"
         href="../images/icons/cable-car.png">
     </head>
@@ -43,11 +44,11 @@ require_once "config.php";
                 <div id="functions">
                     <input type="submit" class="btn-quarter" name="submit" value="Neuen Zugang anlegen" onclick="showForm('registernutzer')">
                     <br>
-                    <input type="submit" class="btn-quarter" name="submit" value="Zugang löschen">
+                    <input type="submit" class="btn-quarter" name="submit" value="Zugang löschen" onclick="showForm('loeschennutzer')">
                     <br>
                     <input type="submit" class="btn-quarter" name="submit" value="Neue Seilbahn hinzufügen" onclick="showForm('registerbahn')">
                     <br>
-                    <input type="submit" class="btn-quarter" name="submit" value="Seilbahn löschen">
+                    <input type="submit" class="btn-quarter" name="submit" value="Seilbahn löschen" onclick="showForm('loeschenbahn')">
                     <br>
                     <input type="submit" class="btn-quarter" name="submit" value="Datenbank anzeigen" id="btn-datenbank">
                     <br>
@@ -75,11 +76,12 @@ require_once "config.php";
                         <form method="POST" action="reg-bahn.php">
                             <h1>Seilbahn hinzufügen</h1>
                             <div class="bahn-form">
-                                <?php if (isset($_SESSION['bahnresult'])): 
-                                    echo ($_SESSION['bahnresult']);
-                                    unset($_SESSION['bahnresult']);
-                                    endif;
-                                ?>
+                                    <?php  if (isset($_SESSION['bahnresult'])):
+                                                echo ($_SESSION["bahnresult"]);
+                                                unset($_SESSION["bahnresult"]);
+                                            endif;
+                                            
+                                    ?>
                             </div>
                             <h3>Pflichtfelder</h3>
                             <div class="bahn-form">
@@ -182,11 +184,6 @@ require_once "config.php";
                     <div id="reg-nutzer">
                         <form method="post" action="register.php">
                             <h1>Neuen Zugang anlegen</h1>
-                            <?php if (isset($_SESSION['regresult'])): 
-                                    echo ($_SESSION['regresult']);
-                                    unset($_SESSION['regresult']);
-                                    endif;
-                                ?>
                             <div class="reg-form">
                                 <input type="text" name="name" class="form-control" placeholder="Vor- und Nachname" required oninvalid="this.setCustomValidity('Bitte einen gültigen Namen eingeben')" oninput="setCustomValidity('')">
                             </div>
@@ -209,6 +206,47 @@ require_once "config.php";
                         </form>
                     </div>
                 </div>
+                <div id="loeschenbahn" class="form-container">
+                    <div id="del-bahn">
+                        <form method="POST" action="del-bahn.php">
+                            <h1>Seilbahn löschen</h1>
+                            <div class="bahn-form">
+                                <input type="text" name="name" class="form-control" placeholder="Bahnname (Standort)" required oninvalid="this.setCustomValidity('Bitte einen gültigen Namen und Standort in Klammern, angeben')" oninput="setCustomValidity('')">
+                            </div>
+                            <div class="bahn-form">
+                                <input type="text" name="h1name" class="form-control" placeholder="Bahnname" required oninvalid="this.setCustomValidity('Bitte einen gültigen Bahnnamen eingeben')" oninput="setCustomValidity('')">
+                            </div>
+                            <div class="bahn-form">
+                                <div class="btn-bahn-submit">
+                                    <input type="submit" name="submit" class="form-control" value="Löschen">
+                                    <button type="reset">Formular leeren</button>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+                <div id="loeschennutzer" class="form-container">
+                    <div id="del-nutzer">
+                        <form method="POST" action="del-nutzer.php">
+                            <h1>Zugang löschen</h1>
+                            <div class="reg-form">
+                                <input type="email" name="email" class="form-control" placeholder="E-Mail" required oninvalid="this.setCustomValidity('Bitte eine gültige E-Mail angeben')" oninput="setCustomValidity('')">
+                            </div>
+                            <div class="reg-form">
+                                <input type="password" name="password" class="form-control" placeholder="Passwort" required oninvalid="this.setCustomValidity('Bitte einen gültiges Passwort eingeben')" oninput="setCustomValidity('')">
+                            </div>
+                            <div class="reg-form">
+                                <input type="password" name="confirm_password" class="form-control" placeholder="Passwort erneut eingeben" required oninvalid="this.setCustomValidity('Bitte einen gültiges Passwort eingeben')" oninput="setCustomValidity('')">
+                            </div>
+                            <div class="reg-form">
+                                <div class="btn-reg-submit">
+                                    <input type="submit" name="submit" class="form-control" value="Löschen">
+                                    <button type="reset">Formular leeren</button>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
             </div>
         </main> 
         <footer>
@@ -220,6 +258,38 @@ require_once "config.php";
                 <a href="../html/Datenschutz.html">Datenschutz</a>
             </p>
         </footer>
+        <?php
+        if (!empty($_SESSION['error'])) {
+            echo "<script>
+                Swal.fire({
+                    title: 'Fehler!',
+                    text: '" . addslashes($_SESSION['error']) . "',
+                    icon: 'error',
+                    confirmButtonText: 'OK',
+                    allowOutsideClick: false,
+                    background: '#333',
+                    color: 'white',
+                    confirmButtonColor: 'red',
+                });
+            </script>";
+            unset($_SESSION['error']);
+        } elseif (!empty($_SESSION['success'])) {
+            echo "<script>
+                Swal.fire({
+                    title: 'Erfolg!',
+                    text: '" . addslashes($_SESSION['success']) . "',
+                    icon: 'success',
+                    confirmButtonText: 'OK',
+                    allowOutsideClick: false,
+                    background: '#333',
+                    color: 'white',
+                    confirmButtonColor: 'green',
+                });
+            </script>";
+            unset($_SESSION['success']);
+        }
+        ?>
+
         <script>
             document.getElementById('btn-logout').addEventListener('click', function() {
                 window.location.href = 'http://localhost/Project_C37592B/php/logout.php';
@@ -235,10 +305,15 @@ require_once "config.php";
                 const forms = document.querySelectorAll('.form-container');
                 forms.forEach(form => form.style.display = 'none');
                 document.getElementById(formId).style.display = 'flex';
+                sessionStorage.setItem('formId', formId);
             }
+
+            window.addEventListener('load', function() {
+                const formId = sessionStorage.getItem('formId');
+                if (formId) {
+                    showForm(formId);
+                }
+            });
         </script>
     </body>
 </html>
-<?php
-    mysqli_close($db);
-?>

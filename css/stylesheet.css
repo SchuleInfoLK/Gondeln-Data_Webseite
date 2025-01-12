@@ -138,7 +138,7 @@ footer {
             border: 3px solid black;
         }
     }
-    #reg-bahn{
+    #reg-bahn, #reg-nutzer, #del-bahn, #del-nutzer{
         direction: ltr;
         display: flex;
         flex-direction: column;
@@ -148,8 +148,8 @@ footer {
         max-height: calc(100vh - 14.5vh);
         justify-items: center;
         padding: 1.5vh;
-        font-size: clamp(17px, 0.7vw, 26px);;
-        .bahn-form{
+        font-size: clamp(17px, 0.7vw, 26px);
+        .bahn-form, .reg-form{
             justify-items: center;
             input, button{
                 border: 3px solid #333;
@@ -165,7 +165,7 @@ footer {
                 width: 35vh;
                 padding: 1vh 2vh;
             }
-            .btn-bahn-submit{
+            .btn-bahn-submit, .btn-reg-submit{
                 margin-top: 1vh;
                 input, button{
                     text-align: center;
@@ -194,77 +194,24 @@ footer {
                     background-image: url("../images/icons/check.png");
                 }
             }
-            .error{
-                text-align: center;
-                color: rgb(255, 46, 46);
-                background-color: #333;
-                border: 3px solid gray;
-                max-width: 35vh;
-                position: sticky;
-            }
-            .success {
-                text-align: center;
-                color: green;
-                font-size: clamp(17px, 0.7vw, 26px);
-                text-size-adjust: 10px;
-                position: sticky;
-            }
         }
-    }
-    #reg-nutzer{
-        direction: ltr;
-        display: flex;
-        flex-direction: column;
-        background-color: #8b8b8b;
-        overflow-y: auto;
-        overflow-x: hidden;
-        max-height: calc(100vh - 14.5vh);
-        justify-items: center;
-        padding: 1.5vh;
-        font-size: clamp(17px, 0.7vw, 26px);;
-        .reg-form{
-            justify-items: center;
-            input, button{
-                border: 3px solid #333;
-                margin: 0.25vh;
-                text-align: center;
-                width: 30vh;
-                padding: 1vh 2vh;
-            }
-            select{
-                border: 3px solid #333;
-                margin: 0.3vh;
-                text-align: center;
-                width: 35vh;
-                padding: 1vh 2vh;
-            }
-            .btn-reg-submit{
-                margin-top: 1vh;
-                input, button{
-                    text-align: center;
-                    width: 15vh;
-                    padding: 1vh 2vh;
-                }
-            }
-            .error{
-                text-align: center;
-                color: rgb(255, 46, 46);
-                background-color: #333;
-                border: 3px solid gray;
-                max-width: 35vh;
-                position: sticky;
-            }
-            .success {
-                text-align: center;
-                color: green;
-                font-size: clamp(17px, 0.7vw, 26px);
-                text-size-adjust: 10px;
-                position: sticky;
-            }
+        .error{
+            text-align: center;
+            color: rgb(255, 46, 46);
+            background-color: #333;
+            border: 3px solid gray;
+            max-width: 35vh;
+            position: sticky;
+        }
+        .success {
+            text-align: center;
+            color: green;
+            font-size: clamp(17px, 0.7vw, 26px);
+            text-size-adjust: 10px;
+            position: sticky;
         }
     }
 }
-
 
 .container{
     background-image: url("../images/background/skiweltbahn.JPG");
