@@ -340,7 +340,7 @@ if ($db === false) {
             });
 
             document.getElementById('btn-tohub').addEventListener('click', function() {//Zur Seitenauswahl wechseln
-                alert('Bitte Link anpassen');
+                alert('Bitte Link anpassen in Homepage.php Line: 344');
                 window.location.href = '';//Link anpassen
             });
 

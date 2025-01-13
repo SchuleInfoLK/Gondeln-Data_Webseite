@@ -12,7 +12,6 @@
             -moz-user-select: none;
             -ms-user-select: none;
             user-select: none;
-            overflow: hidden;
             text-align: center;
             font-family: Arial, sans-serif;
             background-color: #333;
@@ -20,7 +19,7 @@
             a, a:visited {
                 color: rgb(140, 193, 207);
             }
-            h1, h2, h3, h4, h5, h6 {
+            h1, h2, h3, h4, h5, h6, .unterpunkt{
                 text-decoration: underline;
             }
         }
@@ -103,6 +102,7 @@
 </head>
 <body>
     <h1>Hinweise zur Nutzung</h1>
+    <h4 class="important">Vor der Weiterleitung MÜSSEN Sie die Lizenz akzeptieren (ganz unten)</h4>
     <div class="inhalt">
         <div class="lizenz">
                 <h1><a href="https://github.com/SchuleInfoLK/Project_C37592B?tab=License-1-ov-file">Lizenz</a></h1>
@@ -122,25 +122,41 @@
         <div class="readme">
             <h1><a href="https://github.com/SchuleInfoLK/Project_C37592B?tab=readme-ov-file">Readme</a></h1>
             <br>
-            <h3>Hinweis zur Nutzung:</h3>
+            <h2>Hinweis zur Nutzung:</h2>
             <div class="important">
-            <p>Die Webseite MUSS auf einem (Lokalen-)Server liegen um vollständig zu funktionieren, um PHP und MySQL ausführen zu können.</p>
+            <p>Die Webseite MUSS auf einem (Lokalen-)Server liegen um PHP und MySQL vollständig ausführen zu können.</p>
             </div>
                 <h3>Anleitung zur Nutzung mit einem Lokalenwebserver mit XAMPP</h3>
             <h4>1. Nutzung von PHP</h4>
             <p>- <a href="https://www.apachefriends.org/download.html">Laden</a> Sie XAMPP herunter und installieren Sie es</p>
-            <p>- Starten Sie dann den Apache Server und legen Sie den Ordner im Verzeichnis: <code>C:\xampp\htdocs</code></p>
-            <p>- Rufen Sie dann im Browser: <code>localhost/"Ordnername"/"dateiname"."dateiendung"</code> auf</p>
+            <p>- Starten Sie dann den Apache Server und legen Sie den Ordner im Verzeichnis: <code>C:\xampp\htdocs</code> ab </p>
+            <br>
             <h4>2. Nutzung von MySQL</h4>
-            <p>- Falls noch nicht geschehen, <a href="https://www.apachefriends.org/download.html">Laden</a> Sie XAMPP herunter und installieren Sie es</p>
-            <p>- Starten Sie dann den Apache Server sowie MySQL und legen Sie den Ordner im Verzeichnis: <code>C:\xampp\htdocs</code></p>
+            <p class="unterpunkt">2.1 Falls noch nicht geschehen</p>
+            <p>- <a href="https://www.apachefriends.org/download.html">Laden</a> Sie XAMPP herunter und installieren Sie es</p>
+            <p>- Starten Sie dann den Apache Server und legen Sie den Ordner im Verzeichnis: <code>C:\xampp\htdocs</code> ab</p>
+
+            <p class="unterpunkt">2.2 Einrichten der Datenbank</p>
+            <p>- Starten Sie zusätzlich den MySQL Server</p>
             <p>- Öffnen Sie anschließend <code>http://localhost/phpmyadmin/</code></p>
             <p>- Erstellen Sie nun mit "Neu" eine neue Datenbank mit dem Namen: <code>projekt_c37592b</code> mit <code>utf8_unicode_ci</code></p>
             <p>- Wählen Sie nun am linken Rand die erstellte Datenbank aus und wählen Sie oben den Reiter <em>Importieren</em></p>
-            <p>- Importieren Sie zuerst die Datei: <code>database.sql.gz</code> und bestätigen das Ganze mit <em>ok</em></p>
+            <p>- Importieren Sie zuerst die Datei: <code>users.sql.gz</code> und bestätigen das Ganze mit <em>ok</em></p>
             <p>- Wiederholen Sie die letzten beiden Schritte mit der Datei: <code>SeilbahnDaten.sql.gz</code></p>
             <p>- Rufen Sie dann im Browser: <code>../php/Homepage.php</code> auf</p>
             <h4>3. Anschließend sollte die Webseite angezeigt werden und durch die Nutzung der Buttons verschiedene Seilbahnen mit Daten angezeigt werden.</h4>
+            <p class="unterpunkt">3.1 Standard Account für Anmeldung:</p>
+            <p> - Email: <code>test@test.de</code></p>
+            <p> - Passwort: <code>testtest</code></p>
+            <p>(Erstellen Sie dann einen Neuen Zugang und löschen den Standardzugang um die Sicherheit zu gewährleisten)</p>
+            <br>
+            <p class="unterpunkt">3.2 Verlinkung der Webseite</p>
+            <p> - Die Seite <code>hinweis.html</code> wird als Zugangspunkt angesehen über den man auf die Seite kommt</p>
+            <p> - Der Button <code>Zur Seitenauswahl</code> auf <code>Hompage.php</code> muss auf die Seite, <br>
+                  von der man kommt verlinkt werden (siehe <code>alert()</code> beim anklicken)</p>
+            <br>
+            <br>
+            <p style="text-align: center;">©2024-2025 Philipp Uhlendorf</p>
         </div>
     </div>
     
