@@ -31,7 +31,7 @@
         Passwort: testtest<br>
         (Erstellen Sie dann einen Neuen Zugang und löschen den Standardzugang um die Sicherheit zu gewährleisten)
         <br>
-    - Verlinkungen:
+    - Verlinkungen:<br>
         Die Seite `hinweis.html` wird als Zugangspunkt genommen um auf diese Site zu kommen<br>
         Der Button `Zur Seitenauswahl` auf `Homepage.php` muss auf die Hauptseite von der man auf die Seite kommt<br>
         verlinkt werden (siehe `alert()` Nachricht beim Clicken)
