@@ -28,12 +28,16 @@ header {
     margin: 0;
     padding: 0;
     width: 100%;
-    height: 2%;
+    height: 8vh;
     position: sticky;
+    #welcometext{
+        top: 1.25vh;
+        position: fixed;
+    }
     #logout {
         text-align: center;
         padding: 0px;
-        top: 1%;
+        top: 2vh;
         right: 100px;
         position: fixed;
         width: 30px;
@@ -48,7 +52,26 @@ header {
             color: white;
         }
     }
+    #tohub {
+        text-align: center;
+        padding: 0px;
+        top: 2vh;
+        left: 100px;
+        position: fixed;
+        width: 30px;
+        height: auto;
+        .btn-teriträr{
+            background-color: #333;
+            color: white;
+            padding: 12px 28px;
+        }
+        .btn-teriträr:hover{
+            background-color: #4b4b4b;
+            color: white;
+        }
+    }
 }
+
 
 main{
     top: 10%;
@@ -76,6 +99,7 @@ footer {
     padding: 0;
     bottom: 0;
     width: 100%;
+    height: 4vh;
     position: fixed;
     a{
         color: white;
@@ -85,6 +109,7 @@ footer {
     }
 }
 
+
 .flex-container {
     display: flex;
     flex-direction: row;
@@ -93,7 +118,13 @@ footer {
     background-image: url("../images/background/panoischgl.jpg");
     background-repeat: no-repeat;
     background-size: 100%, auto;
+    .form-container{
+        display: none;
+    }
     #functions{
+        overflow-y: auto;
+        overflow-x: hidden;
+        max-height: calc(100vh - 14.5vh);
         padding: 1.5vh;
         background-color: #8b8b8b;
         .btn-quarter{
@@ -107,17 +138,18 @@ footer {
             border: 3px solid black;
         }
     }
-    #reg-bahn{
+    #reg-bahn, #reg-nutzer, #del-bahn, #del-nutzer{
         direction: ltr;
         display: flex;
         flex-direction: column;
         background-color: #8b8b8b;
         overflow-y: auto;
         overflow-x: hidden;
-        max-height: calc(100vh - 16vh);
+        max-height: calc(100vh - 14.5vh);
         justify-items: center;
         padding: 1.5vh;
-        .bahn-form{
+        font-size: clamp(17px, 0.7vw, 26px);
+        .bahn-form, .reg-form{
             justify-items: center;
             input, button{
                 border: 3px solid #333;
@@ -133,7 +165,7 @@ footer {
                 width: 35vh;
                 padding: 1vh 2vh;
             }
-            .btn-bahn-submit{
+            .btn-bahn-submit, .btn-reg-submit{
                 margin-top: 1vh;
                 input, button{
                     text-align: center;
@@ -162,25 +194,24 @@ footer {
                     background-image: url("../images/icons/check.png");
                 }
             }
-            .error{
-                text-align: center;
-                color: rgb(255, 46, 46);
-                background-color: #333;
-                border: 3px solid gray;
-                max-width: 35vh;
-                position: sticky;
-            }
-            .success {
-                text-align: center;
-                color: green;
-                font-size: clamp(17px, 0.7vw, 26px);
-                text-size-adjust: 10px;
-                position: sticky;
-            }
+        }
+        .error{
+            text-align: center;
+            color: rgb(255, 46, 46);
+            background-color: #333;
+            border: 3px solid gray;
+            max-width: 35vh;
+            position: sticky;
+        }
+        .success {
+            text-align: center;
+            color: green;
+            font-size: clamp(17px, 0.7vw, 26px);
+            text-size-adjust: 10px;
+            position: sticky;
         }
     }
 }
-
 
 .container{
     background-image: url("../images/background/skiweltbahn.JPG");
@@ -255,7 +286,7 @@ footer {
             }
         }
     }
-    #regbody {
+   /* #regbody {
         min-height: 100vh;
         margin: 0;
         flex-direction: column;
@@ -307,7 +338,7 @@ footer {
             text-size-adjust: 10px;
             position: sticky;
         }
-    }
+    }*/
 }
 
 #welcome {
@@ -329,9 +360,6 @@ footer {
 .seilbahn{
     overflow: hidden;
     background-color: #a1e2f8;
-    header{
-        height:3%;
-    }
     main{
         display: flex;
         justify-content: space-between;
@@ -339,7 +367,7 @@ footer {
             text-align: center;
             overflow-y: auto;
             overflow-x: hidden;
-            max-height: calc(100vh - 11vh);
+            max-height: calc(100vh - 12vh);
             flex-grow: 1;
             flex-shrink: 0;
             position: sticky;
@@ -381,7 +409,7 @@ footer {
             max-width: 300px;
             overflow-y: auto;
             overflow-x: hidden;
-            max-height: calc(100vh - 10vh);
+            max-height: calc(100vh - 12vh);
             flex-grow: 1;
             margin-left: 1%;
             text-align: left;
@@ -413,8 +441,6 @@ footer {
                     border: 3px rgb(2, 2, 99) solid;
                 }
             }
-            
-        } 
+        }
     }
-    
 }

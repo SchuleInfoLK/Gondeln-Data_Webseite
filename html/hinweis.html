@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hinweise zur Nutzung</title>
+    <style>
+        body {
+            -webkit-touch-callout: none;
+            -webkit-user-select: none;
+            -khtml-user-select: none;
+            -moz-user-select: none;
+            -ms-user-select: none;
+            user-select: none;
+            overflow: hidden;
+            text-align: center;
+            font-family: Arial, sans-serif;
+            background-color: #333;
+            color: white;
+            a, a:visited {
+                color: rgb(140, 193, 207);
+            }
+            h1, h2, h3, h4, h5, h6 {
+                text-decoration: underline;
+            }
+        }
+        .lizenz {
+            text-align: center;
+        }
+        .readme {
+            text-align: left;
+            p{
+                margin-left: 30px;
+            }
+            h1, h2, h3, h4, h5, h6 {
+                text-align: center;
+            }
+        }
+        .button-container {
+                justify-self: center;
+                background-color: red;
+                color: black;
+                width: auto;
+                border-radius: 10px;
+                border: black 3px solid;
+                display: flex;
+                flex-direction: row;
+                align-items: center;
+                justify-content: center;
+                gap: 10px;
+                label {
+                font-size: larger;
+                margin-left: 10px;
+            }
+            button {
+                background-color: green;
+                color: white;
+                border: none;
+                padding: 10px;
+                border-radius: 5px;
+                font-size: larger;
+                margin-left: 10px;
+                border-left: black 3px solid;
+            }
+            button:disabled {
+                background-color: rgb(115, 185, 112);
+            }
+            input[type="checkbox"] {
+                width: 30px;
+                height: 30px;
+                padding: 5px;
+            }
+            input[type="checkbox"]:checked {
+                justify-content: center;
+                text-align: center;
+                appearance: none;
+                -webkit-appearance: none;
+                background-image: url("../images/icons/check.png");
+                background-repeat: no-repeat;
+                background-size: 100%, auto;
+                background-position: center;
+                border: hidden;
+            }
+        }
+        p{
+            font-size: large;
+        }
+        .inhalt{
+            justify-content: space-around;
+            align-items: center;
+            display: flex;
+        }
+        code{
+            background-color: #444;
+            color: white;
+            padding: 2px;
+            border-radius: 5px;
+        }
+        .important{
+            color: red;
+        }
+    </style>
+</head>
+<body>
+    <h1>Hinweise zur Nutzung</h1>
+    <div class="inhalt">
+        <div class="lizenz">
+                <h1><a href="https://github.com/SchuleInfoLK/Project_C37592B?tab=License-1-ov-file">Lizenz</a></h1>
+            <p>MIT License</p>
+            <p>Copyright (c) 2024-2025 Philipp Uhlendorf</p>
+            <h2>English:</h2>
+            <p>It is strictly prohibited to copy, modify, merge, publish, distribute,<br> sublicense, and/or sell copies of this software and its associated<br> documentation files (the "Software") or make it accessible to third <br>parties without prior written permission from the copyright holder.</p>
+            <p>The use of the Software is only permitted under the condition that <br>explicit authorization has been obtained from the copyright holder. <br>Any violation of these terms will be subject to legal action.</p>
+            <p>The images contained in the original of the Software are ALL protected <br>by copyright and may not be used WITHOUT the express permission of the <br>copyright holder. The image rights are held by the creator of the Software.</p>
+            <p>THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR <br>IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, <br>FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE <br>AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER <br>LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, <br>OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.</p>
+            <h2>Deutsch:</h2>
+            <p>Es ist ausdrücklich untersagt, diese Software und die zugehörigen <br>Dokumentationsdateien (die „Software“) ohne vorherige schriftliche Genehmigung <br>des Urheberrechtsinhabers zu kopieren, zu modifizieren, zusammenzuführen, <br>zu veröffentlichen, zu verbreiten, unterzulizenzieren und/oder Kopien der <br>Software zu verkaufen oder Dritten zugänglich zu machen.</p>
+            <p>Die Nutzung der Software ist nur unter der Bedingung erlaubt, dass eine <br>ausdrückliche Genehmigung des Urheberrechtsinhabers vorliegt. Jegliche <br>Verletzung dieser Bestimmungen wird rechtlich verfolgt.</p>
+            <p>Die im Original der Software enthaltenen Bilder sind ALLE urheberrechtlich geschützt <br>und dürfen nicht OHNE ausdrückliche Genehmigung des Urheberrechtsinhabers verwendet werden. <br>Die Bildrechte liegen bei dem Ersteller der Software.</p>
+            <p>DIE SOFTWARE WIRD ALS "diese" BEREITGESTELLT, OHNE JEGLICHE GEWÄHRLEISTUNG, <br>WEDER AUSDRÜCKLICH NOCH IMPLIZIERT, EINSCHLIESSLICH, ABER NICHT BESCHRÄNKT <br>AUF DIE GEWÄHRLEISTUNG DER MARKTGÄNGIGKEIT, EIGNUNG FÜR EINEN BESTIMMTEN ZWECK <br>UND NICHTVERLETZUNG VON RECHTEN. IN KEINEM FALL SIND DIE AUTOREN ODER <br>URHEBERRECHTSINHABER HAFTBAR FÜR ANSPRÜCHE, SCHÄDEN ODER ANDERE VERPFLICHTUNGEN, <br>SEI ES AUS VERTRAGSVERHÄLTNISSEN, UNERLAUBTEN HANDLUNGEN ODER ANDERWEITIG, DIE <br>AUS ODER IM ZUSAMMENHANG MIT DER SOFTWARE ODER DER NUTZUNG ODER ANDERWEITIGEN <br>VERWENDUNG DER SOFTWARE ENTSTEHEN.</p>
+        </div>
+        <div class="readme">
+            <h1><a href="https://github.com/SchuleInfoLK/Project_C37592B?tab=readme-ov-file">Readme</a></h1>
+            <br>
+            <h3>Hinweis zur Nutzung:</h3>
+            <div class="important">
+            <p>Die Webseite MUSS auf einem (Lokalen-)Server liegen um vollständig zu funktionieren, um PHP und MySQL ausführen zu können.</p>
+            </div>
+                <h3>Anleitung zur Nutzung mit einem Lokalenwebserver mit XAMPP</h3>
+            <h4>1. Nutzung von PHP</h4>
+            <p>- <a href="https://www.apachefriends.org/download.html">Laden</a> Sie XAMPP herunter und installieren Sie es</p>
+            <p>- Starten Sie dann den Apache Server und legen Sie den Ordner im Verzeichnis: <code>C:\xampp\htdocs</code></p>
+            <p>- Rufen Sie dann im Browser: <code>localhost/"Ordnername"/"dateiname"."dateiendung"</code> auf</p>
+            <h4>2. Nutzung von MySQL</h4>
+            <p>- Falls noch nicht geschehen, <a href="https://www.apachefriends.org/download.html">Laden</a> Sie XAMPP herunter und installieren Sie es</p>
+            <p>- Starten Sie dann den Apache Server sowie MySQL und legen Sie den Ordner im Verzeichnis: <code>C:\xampp\htdocs</code></p>
+            <p>- Öffnen Sie anschließend <code>http://localhost/phpmyadmin/</code></p>
+            <p>- Erstellen Sie nun mit "Neu" eine neue Datenbank mit dem Namen: <code>projekt_c37592b</code> mit <code>utf8_unicode_ci</code></p>
+            <p>- Wählen Sie nun am linken Rand die erstellte Datenbank aus und wählen Sie oben den Reiter <em>Importieren</em></p>
+            <p>- Importieren Sie zuerst die Datei: <code>database.sql.gz</code> und bestätigen das Ganze mit <em>ok</em></p>
+            <p>- Wiederholen Sie die letzten beiden Schritte mit der Datei: <code>SeilbahnDaten.sql.gz</code></p>
+            <p>- Rufen Sie dann im Browser: <code>../php/Homepage.php</code> auf</p>
+            <h4>3. Anschließend sollte die Webseite angezeigt werden und durch die Nutzung der Buttons verschiedene Seilbahnen mit Daten angezeigt werden.</h4>
+        </div>
+    </div>
+    
+    <div class="button-container">
+        <input type="checkbox" id="confirm" name="confirm">
+        <label for="confirm">I have read the Readme and accept the License</label><br><br>
+        <button onclick="proceed()" disabled id="proceedButton">Proceed</button>
+    </div>
+
+    <script>
+        const confirmCheckbox = document.getElementById('confirm');
+        const proceedButton = document.getElementById('proceedButton');
+
+        confirmCheckbox.addEventListener('change', function() {
+            proceedButton.disabled = !this.checked;
+        });
+
+        function proceed() {
+            if (confirmCheckbox.checked) {
+                //alert('Thank you for accepting the terms.');
+                window.location.href = 'http://localhost/Project_C37592B/php/Homepage.php';
+            }
+        }
+    </script>
+</body>
+</html>
