@@ -1,4 +1,6 @@
-# Project_C37592B
+# Gondeldata Webseite
+Notice: If there are some Errors or Problem you can report this [here](https://github.com/SchuleInfoLK/Gondeln-Data_Webseite/issues)
+[English below]
 
 
 ## Hinweis zur Nutzung:
@@ -35,6 +37,42 @@
         Die Seite `hinweis.html` wird als Zugangspunkt genommen um auf diese Site zu kommen<br>
         Der Button `Zur Seitenauswahl` auf `Homepage.php` muss auf die Hauptseite von der man auf die Seite kommt<br>
         verlinkt werden (siehe `alert()` Nachricht beim Clicken)
+<br>
+## Note on Usage:
+- The website MUST be hosted on a (local) server to fully execute PHP and MySQL.
+
+## Instructions for Use with a Local Web Server using XAMPP
+
+1. ### Using PHP
+    - [Download](https://www.apachefriends.org/download.html) and install XAMPP  
+    - Then start the Apache Server and place the folder in the directory: `C:\xampp\htdocs`  
+    - Then open the browser and go to: `localhost/"foldername"/"filename"."fileextension"`
+
+2. ### Using MySQL
+   2.1 **If not already done:**<br>
+    - [Download](https://www.apachefriends.org/download.html) and install XAMPP<br>
+    - Then start the Apache Server and place the folder in the directory: `C:\xampp\htdocs`<br>
+    
+   2.2 **Setting up the Database:**
+    - Also start the MySQL Server  
+    - Then open `http://localhost/phpmyadmin/`  
+    - Create a new database by clicking on "New" with the name: `projekt_c37592b` and use `utf8_unicode_ci`  
+    - Now select the created database from the left panel and choose the *Import* tab at the top  
+    - First import the file: `users.sql.gz` and confirm by clicking *OK*  
+    - Repeat the last two steps with the file: `SeilbahnDaten.sql.gz`  
+    - Then open in your browser: `../php/Homepage.php`
+
+4. ### The website should now be displayed, and by using the buttons, different cableways with data should be shown  
+    - Default account for login:<br>
+        E-mail: test@test.de<br>
+        Password: testtest<br>
+        (Then create a new account and delete the default one to ensure security)  
+        <br>
+    - Links:<br>
+        The page `hinweis.html` is used as the access point to get to this site<br>
+        The button `Zur Seitenauswahl` on `Homepage.php` must link back to the main page from which this page is accessed<br>
+        (see the `alert()` message when clicking)
+
 <br>
 <br>
    ©2024-2025 Philipp Uhlendorf
